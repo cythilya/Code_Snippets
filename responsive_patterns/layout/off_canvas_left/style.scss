@@ -1,0 +1,60 @@
+.pattern{
+	.wrap {
+		position: relative;
+		&.active {
+			left: 16em;
+		}
+	}
+	.menuLink {
+	    display: block;
+	    padding: 1em;
+	}
+	.menu {
+		background: #aaa;
+		box-sizing: border-box;
+		clear: both;
+		padding: 1em;
+		overflow: hidden;
+	}
+	.content {
+		background: #eee;
+		box-sizing: border-box;
+		width: 100%;
+		padding: 1em;
+	}	
+}
+
+.on {
+	.menu{
+		width: 16em;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: -16em;
+	}
+}
+		
+@media screen and (min-width: 48.25em) {
+	.on{
+		.menu{
+			position: static;
+			float: left;
+			width: 30%;
+			height: 100%;			
+		}
+	}
+	.pattern{
+		.menuLink {
+		   display: none;
+		}
+		.wrap{
+			&.active{
+				left: 0;
+			}
+		}
+		.content {
+			clear: none;
+			margin-left: 30%;
+		}		
+	}
+}
