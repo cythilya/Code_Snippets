@@ -1,0 +1,22 @@
+.pattern .offcanvas-top {
+  position: relative;
+  overflow: hidden;
+  height: 50px;
+  -webkit-transition: height 0.5s ease-out;
+  -moz-transition: height 0.5s ease-out;
+  -o-transition: height 0.5s ease-out;
+  transition: height 0.5s ease-out;
+}
+.pattern .offcanvas-top .content {
+  width: 100%;
+  padding-bottom: 40px;
+  position: absolute;
+  bottom: 0;
+}
+.pattern .offcanvas-top .trigger {
+  display: block;
+  padding: 16px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
