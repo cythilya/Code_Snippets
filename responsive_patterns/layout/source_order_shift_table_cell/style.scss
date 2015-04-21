@@ -1,0 +1,20 @@
+.pattern{
+	padding: 10px;
+}
+@media all and (min-width: 640px){
+	.t{
+		display: table;
+		caption-side: top;
+		width: 100%;
+	}
+	.nav{
+		display: table-caption;
+		ol{
+			display: table-row;
+			li{
+				display: inline-block;;
+				margin-right: 10px;
+			}
+		}
+	}
+}
