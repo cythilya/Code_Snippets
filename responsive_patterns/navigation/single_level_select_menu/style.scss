@@ -1,0 +1,27 @@
+.navigation-area{
+	padding: 1em;
+	.navigation{
+		display: block;
+		.nav-list {
+			.item{
+				float: left;
+				margin-right: 1em;
+			}
+		}		
+	}
+	.tinynav { 
+		width: 100%;
+		display: none 
+	}
+}
+
+@media screen and (max-width: 37.5em) {
+	.navigation-area{
+	    .navigation { 
+	    	display: none; 
+	    }
+	    .tinynav { 
+	    	display: block; 
+	    }		   
+	}
+}
