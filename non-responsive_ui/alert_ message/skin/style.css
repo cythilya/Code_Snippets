@@ -1,0 +1,13 @@
+.alert-message{border: 1px solid #666;padding: 10px;width:345px;height: 54px;}
+.alert-message.success{border:1px solid green;}
+.alert-message.notice{border: 1px solid orange;}
+.alert-message.error{border: 1px solid red;}
+.alert-message .icon{background: url(icon_notice.png) no-repeat;float: left;margin-top: 12px;width: 30px;height: 30px;}
+.alert-message.success .icon{background: url(icon_success.png) no-repeat;}
+.alert-message.notice .icon{background: url(icon_notice.png) no-repeat;}
+.alert-message.error .icon{background: url(icon_error.png) no-repeat;}
+.alert-message .main{float: left;padding: 4px 20px 4px 20px;width: 259px;}
+.alert-message .main .title{font-size: 18px;font-weight: bold;height:22px;line-height: 1.2;overflow: hidden;}
+.alert-message .main .content{height: 16px;margin-top: 8px;overflow: hidden;text-align: justify;}
+.alert-message .close{background: url(icon_close.png) no-repeat;float: right;margin-top: 20px;width: 16px;height: 16px;word-wrap: nowrap;text-indent: 100%;overflow: hidden;outline: none;}
+.alert-message .close:hover{opacity: 0.8;}

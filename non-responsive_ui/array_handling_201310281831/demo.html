@@ -1,0 +1,252 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+</head>
+<body>
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script>
+(function($) {
+	//create empty array
+	var arr1 = new Array(); //use the object constructor to create array
+	var arr2 = []; //use literal declaration to create array
+	console.log(arr1); //output: []
+	console.log(arr2); //output: []
+
+	//create array with initial value
+	var arr3 = new Array(1, 2, 3, 4, 5);
+	var arr4 = [1, 2, 3, 4, 5];	
+	console.log(arr3); //output: [1, 2, 3, 4, 5] 
+	console.log(arr4); //output: [1, 2, 3, 4, 5] 	
+
+	//add value to empty array
+	arr1.push("apple", "boy"); //add value by "push"
+	arr2[0] = "cat"; //add value by index
+	arr2[2] = "doll" 
+	console.log(arr1); //output: ["apple", "boy"] 
+	console.log(arr2); //output: ["cat", undefined × 1, "doll"] 
+
+	//add value to initialed array
+	arr3.push(6, 7, 8);
+	arr4.push(9);
+	arr4[7] = 10;
+	console.log(arr3); //output: [1, 2, 3, 4, 5, 6, 7, 8] 
+	console.log(arr4); //output: [1, 2, 3, 4, 5, 9, undefined × 1, 10] 
+
+	//access an array by index
+	console.log("array[1] = " + arr1[1]); //output: array[1] = boy  
+
+	//.length
+	var arr5 = ["elephant", "friend", "giant", "hat", "ice"];
+	console.log("amount of items in arr5 = " + arr5.length); //output: amount of items in arr5 = 5 
+
+	//print all elements in array: using for/in loops
+	//for loop
+	for(var i = 0 ; i < arr5.length ; i++){
+		console.log("arr5[" + i + "] = " + arr5[i]);
+	}
+	/*
+	output:
+	arr5[0] = elephant
+	arr5[1] = friend
+	arr5[2] = giant
+	arr5[3] = hat
+	arr5[4] = ice 
+	*/
+
+	//use "in" in for loop 
+	for(var i in arr5){
+		console.log("arr5[" + i + "] = " + arr5[i]);
+	}
+	/*
+	output:
+	arr5[0] = elephant
+	arr5[1] = friend
+	arr5[2] = giant
+	arr5[3] = hat
+	arr5[4] = ice 
+	*/
+
+	//.concat()
+	var arr6 = ["jacket", "kite", "lion"];
+	var arr7 = ["monkey", "nine", "orange"];
+	var arr8 = ["pie"];
+	var joinResult1 = [];
+	var joinResult2 = [];
+	var joinResult3 = [];
+
+	joinResult1 = arr6.concat(arr7);
+	joinResult2 = arr7.concat(arr6);
+	joinResult3 = joinResult1.concat(arr8);
+
+	console.log("concat arr6 and arr7 = " + joinResult1);
+	console.log("concat arr7 and arr6 = " + joinResult2);
+	console.log("concat arr6, arr7 and arr8 = " + joinResult3);
+	/*
+	output:
+	concat arr6 and arr7 = jacket,kite,lion,monkey,nine,orange
+	concat arr7 and arr6 = monkey,nine,orange,jacket,kite,lion
+	concat arr6, arr7 and arr8 = jacket,kite,lion,monkey,nine,orange,pie 
+	*/
+
+	//.join()
+	//return array content in string format
+	//.join() is called with argument as seperator 
+	console.log("arr6 seperates with comma: " + arr6.join(",")); //output: arr6 seperates with comma: jacket,kite,lion 
+
+	//pop
+	//remove the last element of an array
+	//opposite method: .push()
+
+	//pop the last element "ticket"
+	var arr9 = ["queen", "rabbit", "super", "ticket"];
+	console.log("before pop: " + arr9);
+	arr9.pop();
+	console.log("after pop: " + arr9);
+	arr9.pop();
+	/*
+	output:
+	before pop: queen,rabbit,super,ticket
+	after pop: queen,rabbit,super 
+	*/
+
+	//.reverse()
+	console.log("arr5 bofore reverse: " + arr5);
+	arr5.reverse();
+	console.log("arr5 after reverse: " + arr5);
+	/*
+	output:
+	arr5 bofore reverse: elephant,friend,giant,hat,ice
+	arr5 after reverse: ice,hat,giant,friend,elephant 
+	*/
+
+	//.shift()
+	console.log("arr6 before shift: " + arr6);
+	arr6.shift();
+	console.log("arr6 after shift: " + arr6);
+	/*
+	output:
+	arr6 before shift: jacket,kite,lion
+	arr6 after shift: kite,lion 
+	*/
+
+	//.slice()
+	var arr10 = ["under", "visa", "window", "x-men", "yoyo", "zip"];
+	var sliceResult = [];
+	console.log("arr10 before slice: " + arr10);
+	sliceResult = arr10.slice(3);
+	console.log("arr10 after slice: " + arr10);
+	console.log("slice result: " + sliceResult);
+	/*
+	output:
+	arr10 before slice: under,visa,window,x-men,yoyo,zip
+	arr10 after slice: under,visa,window,x-men,yoyo,zip
+	slice result: x-men,yoyo,zip 
+	*/	
+
+	//.splice()
+	console.log("arr10 before splice: " + arr10);
+	console.log("amount of arr10: " + arr10.length);
+	arr10.splice(2, 2, "splice-apple", "splice-boy", "splice-cat", "splice-dog", "splice-elephant");
+	console.log("arr10 after splice: " + arr10);
+	console.log("amount of arr10: " + arr10.length);
+	/*
+	output:
+	arr10 before splice: under,visa,window,x-men,yoyo,zip
+	amount of arr10: 6
+	arr10 after splice: under,visa,splice-apple,splice-boy,splice-cat,splice-dog,splice-elephant,yoyo,zip
+	amount of arr10: 9 
+	- 第一個參數2從陣列的第幾個開始(在此是第二個)
+	- 第二個參數2是刪除原本陣列中的幾個元素,在此刪掉兩個(window,x-men)
+	- 後方接的是插入陣列的元素值 "splice-apple", "splice-boy", "splice-cat", "splice-dog", "splice-elephant" 共5個
+	*/
+
+	//.sort()
+	//預設是升冪排序
+	var arr11 = ["boy", "apple", "zip", "cat", "goat", "window"];
+	console.log("arr11 before sort: " + arr11);
+	arr11.sort();
+	console.log("arr11 after sort: " + arr11);
+	/*
+	output:
+	arr11 before sort: boy,apple,zip,cat,goat,window demo.html:168
+	arr11 after sort: apple,boy,cat,goat,window,zip 
+	*/
+
+	//降冪排序
+	//sort with comparing function
+	function descending(a, b){
+	    return b-a;
+	}
+
+	var arr12 = [2, 1, 6, 3, 4, 10];
+	arr12.sort(descending);
+	console.log("arr12 after sort(descending): " + arr12);
+	/*
+	output:
+	arr12 after sort(descending): 10,6,4,3,2,1
+	*/
+
+	//.unshift()
+	var arr13 = [1, 2, 3];
+	arr13.unshift(5);
+	console.log("arr13 unshift 5: " + arr13);
+	arr13.unshift(10);
+	console.log("arr13 unshift 10: " + arr13);
+
+	//implement a stack: FILO
+	var stack = [];
+	//push elements into stack
+	stack.unshift("apple"); //1st
+	stack.unshift("boy"); //2en
+	stack.unshift("cat"); //3rd
+
+	//pop elements from stack
+	console.log("stack content: " + stack);
+	stack.shift(); //pop "cat"
+	console.log("stack content: " + stack);
+	stack.shift(); //pop "boy"
+	console.log("stack content: " + stack);
+
+	/*
+	output: 
+	stack content: cat,boy,apple
+	stack content: boy,apple
+	stack content: apple
+	*/
+
+	// native .forEach()
+	function printWithStar(element){
+		console.log("*" + element);
+	}
+	 
+	var arr14 = [ 1, 2, 3, 4, 5 ];
+	arr14.forEach(printWithStar);
+
+	/* 
+	output:
+	*-1
+	*-2
+	*-3
+	*-4
+	*-5 
+	*/
+
+	//$.each()
+	$.each(arr11, function(index, value){
+		console.log("arr11[" + index + "]: " + value);
+	});
+	/*
+	output:
+	arr11[0]: apple
+	arr11[1]: boy
+	arr11[2]: cat
+	arr11[3]: goat
+	arr11[4]: window
+	arr11[5]: zip 
+	*/
+})(jQuery);
+</script>
+</body>
+</html>

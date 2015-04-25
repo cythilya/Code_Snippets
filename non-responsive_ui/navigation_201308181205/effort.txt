@@ -1,0 +1,7 @@
+8/18 ¤Áª©+js 30min
+
+support:chrome, ff, IE789(78µL¶ê¨¤)
+
+html lint:OK
+css lint:OK
+js lint:OK

@@ -1,0 +1,145 @@
+﻿.eyebrow{
+    font-size:13px;
+    line-height:1.2;
+    margin:0 auto;
+    padding:5px 10px;
+    width:940px;
+}
+.eyebrow .link{
+    color:#059;
+    display:block;
+    float:left;
+    margin-right:15px;
+    text-decoration:none;
+}
+.eyebrow .link:hover{
+    text-decoration:underline;
+}
+.eyebrow .link.set-home-page{
+    color:#ff0000;
+}
+.eyebrow .link.set-home-page .sprite{
+    background:url(icon.png) no-repeat 0 -23px;
+    padding-left:18px;
+}
+.eyebrow .date{
+    float:left;
+    margin-right:15px;
+}
+.eyebrow .panel{
+    float:left;
+    margin-right:15px;
+    width:127px;
+    padding:0 0 0 10px;
+    margin-top:-1px;
+}
+.eyebrow .panel.on{
+    border:1px solid #c0c5e2
+}
+.eyebrow .panel.off{
+    border:1px solid #fff;
+}
+.eyebrow .panel.on .options {
+    display:block;
+}
+.eyebrow .panel.off .options{
+    display:none;
+}
+.eyebrow .panel .location{
+    color:#059;
+    float:left;
+}
+.eyebrow .panel .toggle, .eyebrow .panel .toggle{
+    display:block;
+    float:left;
+    margin-right:5px;
+    margin-left:5px;
+    overflow:hidden;
+    outline:none;
+    text-indent:100%;
+    white-space:nowrap;
+    width:13px;
+}
+.eyebrow .panel .toggle, .eyebrow .panel.on .toggle{
+    background:url(icon.png) no-repeat -289px -119px;
+}
+.eyebrow .panel .toggle, .eyebrow .panel.off .toggle{
+    background:url(icon.png) no-repeat -314px -119px;
+}
+.eyebrow .panel .temperature{
+    float:left;
+}
+.eyebrow .panel .options{
+    float:left;
+}
+.eyebrow .panel .options li{
+    float:left;
+    margin-right:10px;
+}
+.eyebrow .panel .options li:nth-child(4n){
+    margin-right:0;
+}
+.eyebrow .panel .options li a{
+    color:#059;
+    text-decoration:none;
+}
+.eyebrow .panel .options li a:hover{
+    text-decoration:underline;
+}
+.eyebrow .style-setting{
+    float:left;
+    margin-right:15px;
+}
+.eyebrow .style-setting li{
+    float:left;
+    margin-right:5px;
+}
+.eyebrow .style-setting li:last-child{
+    margin-right:0;
+}
+.eyebrow .style-setting li a{
+    background:#fff;
+    display:block;
+    width:13px;
+    height:13px;
+    text-indent:100%;
+    white-space:nowrap;
+    overflow:hidden;
+    outline:none;
+}
+.eyebrow .style-setting li a.focus{
+    background:url(icon_white.png) no-repeat -289px 0 #fff;
+}
+.eyebrow .style-setting li.blue a{
+    background:blue;
+}
+.eyebrow .style-setting li.blue.focus a{
+    background:url(icon_white.png) no-repeat -289px 0 blue;
+}
+.eyebrow .style-setting li.purple a{
+    background:purple;
+}
+.eyebrow .style-setting li.purple.focus a{
+    background:url(icon_white.png) no-repeat -289px 0 purple;
+}
+.eyebrow .style-setting li.red a{
+    background:red;
+}
+.eyebrow .style-setting li.red.focus a{
+    background:url(icon_white.png) no-repeat -289px 0 red;
+}
+.eyebrow .style-setting li.orange a{
+    background:orange;
+}
+.eyebrow .style-setting li.orange.focus a{
+    background:url(icon_white.png) no-repeat -289px 0 orange;
+}
+.eyebrow .style-setting li.green a{
+    background:green;
+}
+.eyebrow .style-setting li.green.focus a{
+    background:url(icon_white.png) no-repeat -289px 0 green;
+}
+.eyebrow .mobile{
+    float:left;
+}

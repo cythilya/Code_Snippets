@@ -1,0 +1,38 @@
+Requirement:
+1. get value from form elements
+2. post data in json format
+
+Wireframe: none
+
+Snapshot: none
+
+Effort: 3hr
+
+Bug: none
+
+Support: none
+
+Learnt:
+1. input, button, select, textarea tags: inline elements
+
+2 .match(): 只要字串部份符合即會回傳符合的子字串。EX: text或textarea都會找到text。
+
+3. array做字串化且用逗點分隔: .join(',')
+EX: value = arr.join(',');
+
+4. 先放一個欄位的template，然後之後每次把這個template塞值後，push到array，再做JSON.stringify即可。
+EX: var item = { "ColumnName": "", "ColumnValue": "" };
+
+5. radio, checkbox, select有多種選擇要過濾: 將選項蒐集起來，然後檢查是否符合條件。
+(放到一個object裡面，用.each()檢查)
+
+6. input[type=file]取檔名: .val()
+
+7. JSON.stringify同時要設定:
+dataType: 'json',
+traditional: true,
+contentType: "application/json; charset=utf-8",
+
+Demo: none
+
+Source Code: none

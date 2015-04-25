@@ -1,0 +1,48 @@
+﻿<!doctype html>
+<html>
+<head>
+<title>$title</title>
+<meta charset="utf-8">
+</head>
+<body>
+<button>show and bitwise operator reault</button>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	//fake data
+	//var total = 2047; 
+	//台北市(1), 新北市(2), 基隆市(4), 新竹縣(8), 新竹市(16), 桃園縣(32), 台中縣(64), 台中市(128), 台南縣(256), 台南市(512), 高雄市(1024)
+	
+	var total = 1593;
+	//台北市(1), 新竹縣(8), 新竹市(16), 桃園縣(32), 台南市(512), 高雄市(1024)
+
+	var cityList = {
+	    "item1": { "name": "台北市", "code": 1 },
+	    "item2": { "name": "新北市", "code": 2 },
+	    "item4": { "name": "基隆市", "code": 4 },
+	    "item8": { "name": "新竹縣", "code": 8 },
+	    "item16": { "name": "新竹市", "code": 16 },
+	    "item32": { "name": "桃園縣", "code": 32 },
+	    "item64": { "name": "台中縣", "code": 64 },
+	    "item128": { "name": "台中市", "code": 128 },
+	    "item256": { "name": "台南縣", "code": 256 },
+	    "item512": { "name": "台南市", "code": 512 },
+	    "item1024": { "name": "高雄市", "code": 1024 }
+	}
+
+	var cityArray = [];
+	var out = "";
+
+	$.each(cityList, function(index, value){
+		if(value.code & total){
+			cityArray.push(value.name);
+		}
+	});
+
+	$('button').click(function(){
+		alert(cityArray);
+	});
+});
+</script>
+</body>
+</html>

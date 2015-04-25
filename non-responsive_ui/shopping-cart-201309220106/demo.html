@@ -1,0 +1,68 @@
+﻿<!doctype html>
+<html>
+<head>
+<title>$title</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="skin/style.css">
+</head>
+<body>
+<div id="sale" class="sale">
+	<!--product list-->
+	<h2>product list</h2>
+	<div class="product-list clearfix">
+		<div class="item">
+			<a href="#" class="thumbnail">
+				<img src="http://dummyimage.com/50x50/82cdff/fff.png" alt="item-1">
+			</a>
+			<div class="name">item-1</div>
+			<div>price: $10</div>
+			<select>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+			</select>
+			<button class="btn-add-to-cart" data="{"id": "1234", "price": "10", "quantity": "2"}">Buy</button>
+		</div>
+		<div class="item">
+			<a href="#" class="thumbnail">
+				<img src="http://dummyimage.com/50x50/ff82b0/fff.png" alt="item-2">
+			</a>
+			<div class="name">item-2</div>
+			<div>price: $20</div>
+			<select>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+			</select>
+			<button class="btn-add-to-cart" data="{"id": "5678", "price": "20", "quantity": "3"}">Buy</button>
+		</div>		
+	</div>
+	<hr>
+	<!--shopping list-->
+	<h2>shopping list</h2>
+	<div class="shopping-list">
+		<table border="1">
+			<tr class="title">
+				<td class="thumbnail">thumbnail</td>
+				<td class="name">product name</td>
+				<td class="quantity">quantity</td>
+				<td class="price">price</td>
+				<td class="total">total</td>
+				<td class="delete">delete</td>
+			</tr>
+		</table>
+	</div>
+	<hr>
+	<!--shopping cart-->
+	<div class="cart">
+		<a href="#" class="toggle">close</a>
+	    <ul class="cart-list clearfix">
+	    </ul>
+	</div>
+</div>
+<img src="http://dummyimage.com/960x1000/ff82b0/fff.png" style="display:block;margin:0 auto;width:960px;">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="js/prefixfree.min.js"></script>
+<script src="js/template_singleton.js"></script>
+</body>
+</html>

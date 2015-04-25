@@ -1,0 +1,26 @@
+﻿.image-uploader{font-family: verdana;font-family: 13px;width: 450px;}
+.image-uploader .image-uploader-wrapper{border: 1px solid #666;padding: 20px;/*text-align: justify;*/word-wrap: break-word;}
+.image-uploader .image-uploader-wrapper .btn{border-radius: 3px;box-sizing: content-box;color: #fff;display: block;font-weight: bold;line-height: 16px;padding: 5px;text-align: center;text-decoration: none;}
+.image-uploader .image-uploader-wrapper .btn.disabled{background: #999;}
+.image-uploader .image-uploader-wrapper .header{color: #333;font-weight: bold;}
+.image-uploader .image-uploader-wrapper .body{margin-top: 20px;}
+.image-uploader .image-uploader-wrapper .body .loading{display: none;}
+.image-uploader .image-uploader-wrapper .body .loading img{display: block;width: 24px;height: 24px;padding-left: 73px;}
+.image-uploader .image-uploader-wrapper .body .thumbnail{float: left;}
+.image-uploader .image-uploader-wrapper .body .thumbnail img{display: block;width: 100px;}
+.image-uploader .image-uploader-wrapper .body .info{float: left;margin-left: 10px;width: 298px;}
+.image-uploader .image-uploader-wrapper .body .info .name{margin-bottom: 11px;}
+.image-uploader .image-uploader-wrapper .body .info .size{margin-bottom: 11px;}
+.image-uploader .image-uploader-wrapper .body .info .btn-remove{background: #f0ad4e;width: 70px;}
+.image-uploader .image-uploader-wrapper .body .info .btn-remove:hover{background: #ed9c28;}
+.image-uploader .image-uploader-wrapper .footer{margin-top: 20px;}
+.image-uploader .image-uploader-wrapper .footer .message{/*background: #428bca;*//*border: 1px solid #428bca;*//*border-radius: 3px;*/color: #428bca;display: none;font-weight: bold;/*padding: 5px;*//*text-align: center;*//*width: 170px;*/}
+.image-uploader .image-uploader-wrapper .footer .btn-upload{background: #428bca;width: 160px;}
+.image-uploader .image-uploader-wrapper .footer .btn-upload:hover{background: #3276b1;}
+.image-uploader .image-uploader-wrapper .footer .btn-upload.disabled,
+.image-uploader .image-uploader-wrapper .footer .btn-upload.disabled:hover{background: #999;cursor: not-allowed;}
+.image-uploader .image-uploader-wrapper .footer .btn-confirm{background: #428bca;padding: 5px 10px;display: none;}
+.image-uploader .image-uploader-wrapper .footer .btn-confirm:hover{background: #3276b1;}
+.image-uploader .image-uploader-wrapper .footer .btn-confirm.disabled,
+.image-uploader .image-uploader-wrapper .footer .btn-confirm.disabled:hover{background: #999;cursor: not-allowed;}
+.image-uploader .image-uploader-wrapper .footer input[type="file"]{float:right;opacity: 0;}

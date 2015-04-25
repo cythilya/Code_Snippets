@@ -1,0 +1,18 @@
+Requirement:
+- click one item
+- send ajax, get success response
+- reset cart info(img src, quantity)
+- click close button to hide the cart; click open button to show the cart
+  
+Effort:
+plan/html/css: 2.5hr
+js: 2hr
+total: 4.5hr
+
+Support: ff, chrome, ie789
+
+html, css js lint: not done yet
+
+
+Q:
+- the difference between singleton and plugin

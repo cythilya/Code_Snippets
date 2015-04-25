@@ -1,0 +1,71 @@
+﻿<!doctype html>
+<html>
+<head>
+<title>$title</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="reset-font-min.css">
+<link rel="stylesheet" href="clearfix.css">
+<style>
+form{border:1px solid #999;margin:0 auto;padding:10px;width:580px;}
+form td{padding:10px;}
+form .title{width:60px;}
+.submit{display:block;margin:10px auto 0 auto;width:100px;}
+</style>
+</head>
+<body>
+<form class="form">
+	<table>
+		<tr>
+			<td class="title">single line</td>
+			<td class="item item-text">
+				<input type="text" data-title="single line">
+			</td>
+		</tr>
+		<tr>
+			<td class="title">multiline</td>
+			<td class="item item-multiline">
+				<textarea data-title="multiline"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td class="title">radio button</td>
+			<td class="item item-radio">
+				<label><input type="radio" value="r1" name="g1" data-title="radio button">option 1</label>
+				<label><input type="radio" value="r2" name="g1" data-title="radio button">option 2</label>
+				<label><input type="radio" value="r3" name="g1" data-title="radio button">option 3</label>
+				<label><input type="radio" value="r4" name="g1" data-title="radio button">option 4</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="title">checkbox</td>
+			<td class="item item-checkbox">
+				<label><input type="checkbox" value="c1" data-title="checkbox">option 1</label>
+				<label><input type="checkbox" value="c2" data-title="checkbox">option 2</label>
+				<label><input type="checkbox" value="c3" data-title="checkbox">option 3</label>
+				<label><input type="checkbox" value="c4" data-title="checkbox">option 4</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="title">select</td>
+			<td class="item item-select">
+				<select data-title="下拉選項">
+					<option value="s1" data-title="select">option 1</option>
+					<option value="s2" data-title="select">option 2</option>
+					<option value="s3" data-title="select">option 3</option>
+					<option value="s4" data-title="select">option 4</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="title">file</td>
+			<td class="item item-file">
+				<input type="file" data-title="file">
+			</td>
+		</tr>
+	</table>
+</form>
+<button class="submit">submit</button>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

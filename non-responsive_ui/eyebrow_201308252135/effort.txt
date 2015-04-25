@@ -1,0 +1,16 @@
+8/24
+»`¶°¸ê®Æ: 24min
+html: 60min
+css: 1hr 11min
+
+8/25
+css: 23min
+js: 40min
+
+total:3hr 38min~4hr
+
+support:ff, chrome, ie789
+
+html lint: OK
+css lint: OK
+js lint: OK

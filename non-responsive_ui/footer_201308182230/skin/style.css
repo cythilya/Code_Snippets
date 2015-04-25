@@ -1,0 +1,7 @@
+﻿.footer{width:270px;margin:0 auto;}
+.footer ul{position:absolute;bottom:0;}
+.footer ul li{float:left;}
+.footer ul li a{color:#2879cc;font-family:verdana;font-size:13px;line-height:1.2;margin:0 10px;}
+.footer ul li a:hover{background:#7fbeff;color:#fff;text-decoration:none;}
+.footer ul li:before{content:"\00b7 ";}
+.footer ul li:first-child:before{content:"";}

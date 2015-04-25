@@ -1,0 +1,3 @@
+effort: 1hr
+html / css / js lint: OK
+support: ff, chrome, IE89

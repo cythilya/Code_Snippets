@@ -1,0 +1,20 @@
+﻿.gallery{background:#eee;width:960px;height:360px;position:relative;}
+.gallery .view{}
+.gallery .view .tab{display:none;}
+.gallery .view .tab img{display:block;}
+.gallery .view .tab.active{display:block;}
+.gallery .view .tab.non-active{display:none;}
+.gallery .view .tab .text{font-size:30px;font-weight:bold;height:36px;position:absolute;left:60px;top:280px;line-height:36px;overflow:hidden;}
+.gallery .nav{background:#f7f7f7;opacity:0.8;height:30px;padding:0 10px;text-align:right;position:relative;bottom:30px;}
+.gallery .nav:hover{background:#fafafa;}
+.gallery .nav.on{display:block;}
+.gallery .nav.off{display:none;}
+.gallery .nav li{display:inline-block;margin-top:10px;}
+.gallery .nav li a{background:#000;border-radius:10px;display:block;width:10px;height:10px;opacity:0.8;float:left;}
+.gallery .nav li a:hover, .gallery .nav li a.active{opacity:0.6;}
+.gallery .prev{background:url(element-pre-next.png) no-repeat 0 0;opacity:0.8;position:absolute;left:10px;top:160px;display:block;width:24px;height:29px;overflow:hidden;text-indent:100px;white-space:nowrap;}
+.gallery .prev:hover, .gallery .prev:active, .gallery .prev.focus{opacity:0.6;}
+.gallery .next{background:url(element-pre-next.png) no-repeat 0 -34px;position:absolute;right:10px;top:160px;opacity:0.8;display:block;width:24px;height:29px;overflow:hidden;text-indent:100px;white-space:nowrap;}
+.gallery .next:hover, .gallery .next:active, .gallery .next.focus{opacity:0.6;}
+.gallery .prev.on, .gallery .next.on{display:block;}
+.gallery .prev.off, .gallery .next.off{display:none;}

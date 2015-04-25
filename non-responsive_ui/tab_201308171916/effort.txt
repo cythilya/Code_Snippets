@@ -1,0 +1,14 @@
+8/12 survey & study: 20min
+       layout: 30min
+
+8/15: layout:30min
+8/17: layout:55min
+        js: 20min
+
+total: 2hr 35min ~ 3hr
+
+support: chrome,ff,ie89
+
+html lint: OK
+css lint: OK
+js lint: OK

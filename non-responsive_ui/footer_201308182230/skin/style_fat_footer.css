@@ -1,0 +1,14 @@
+﻿.wrapper{width:950px;margin:0 auto;}
+.footer{border-top:1px solid #e1e1e1;font-family:arial;width:950px;position:absolute;bottom:0;}
+.footer .content{margin-top:16px;margin-bottom:16px;}
+.footer .content .column{float:left;width:25%;}
+.footer .content .column h3{color:#202020;font-size:18px;line-height:1.2;margin-bottom:5px;padding-left:24px;}
+.footer .content .column h3.doc{background:url(footer_icon.png) no-repeat 0px -14px;}
+.footer .content .column h3.video{background:url(footer_icon.png) no-repeat 0px -114px;}
+.footer .content .column h3.subscribe{background:url(footer_icon.png) no-repeat 0px -48px;}
+.footer .content .column h3.tech{background:url(footer_icon.png) no-repeat 0px -82px;}
+.footer .content .column ul{line-height:22px;}
+.footer .content .column ul li{padding-left:26px;list-style:url(bullet.png) inside;}
+.footer .content .column ul li a{color:#0066cc;font-size:12px;text-decoration:none;}
+.footer .content .column ul li a:hover{text-decoration:underline;}
+.footer .copyright{background:#f5f5f5;border:1px solid #e0e0e0;border-radius:4px 4px 0 0;font-size:11px;padding:20px 10px;word-wrap:break-word;}

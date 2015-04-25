@@ -1,0 +1,5 @@
+9/29
+effort: 1.5hr
+html, css, js lint: OK
+support: ff, chrome, ie789
+wireframe: http://app.mockflow.com/index.jsp?editor=on&publicid=0eb0feab0c32a046e3a3658b1e287dc8&projectid=6aecd68b4d824a90acf23a7c87af9aa2&perm=Owner&template=

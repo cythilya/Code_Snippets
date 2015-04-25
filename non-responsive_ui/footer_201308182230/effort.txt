@@ -1,0 +1,8 @@
+8/18  
+footer ¤Áª© 30min
+fat footer ¤Áª© 1.5hr
+
+support:chrome, ff, ie89
+
+html lint:OK
+css lint:OK

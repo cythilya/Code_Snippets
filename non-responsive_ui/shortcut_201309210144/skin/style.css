@@ -1,0 +1,6 @@
+﻿.shortcut{width:100%;position:fixed;bottom:0;}
+.shortcut .toggle{background:url(icon-arrow.png) no-repeat 0 0 #ddd;border-left:1px solid #999;border-top:1px solid #999;border-right:1px solid #999;border-radius:3px;display:block;margin:0 auto -1px auto;width:16px;height:16px;text-indent:100%;overflow:hidden;white-space:nowrap;outline:none;}
+.shortcut .toggle:hover{background:url(icon-arrow.png) no-repeat 0 0 #eee;}
+.shortcut .toggle.open{background:url(icon-arrow.png) no-repeat 0 -26px #ddd;}
+.shortcut .toggle.open:hover{background:url(icon-arrow.png) no-repeat 0 -26px #eee;}
+.shortcut .content{background:#fff;border-top:1px solid #999;height:60px;display:none;}

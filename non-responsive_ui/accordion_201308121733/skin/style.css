@@ -1,0 +1,139 @@
+﻿.accordion{
+    border:1px solid #22262d;
+    border-radius:4px;
+    color:#fff;
+    font-family:verdana;
+    font-size:12px;
+    font-weight:bold;
+    width:260px;
+}
+.accordion .header > a{
+    background:#54585d; 
+    border-top:1px solid #7b7f83;
+    border-bottom:1px solid #23282f;
+    color:#fff;
+    display:block;
+    height:48px;
+    outline:none;
+}
+.accordion .header > a:hover, .accordion .header > a.focus{
+    background:#5a5e63;
+}
+.accordion .header:first-child > a{
+    border-radius:3px 3px 0 0;
+}
+.accordion .header:last-child > a{
+    border-radius:0 0 3px 3px;
+    border-bottom:0px solid #54585d;
+}
+.accordion .header .icon{
+    display:block;
+    float:left;
+    margin:17px 20px 0 15px;
+    width:13px;
+    height:13px;
+}
+.accordion .header .icon.home{
+    background:url(icon_white.png) no-repeat 0 -24px;
+}
+.accordion .header .icon.message{
+    background:url(icon_white.png) no-repeat -72px 0;
+}
+.accordion .header .icon.setting{
+    background:url(icon_white.png) no-repeat -360px -144px;
+}
+.accordion .header .icon.login{
+    background:url(icon_white.png) no-repeat -168px 0;
+}
+.accordion .header .icon.logout{
+    background:url(icon_white.png) no-repeat -168px 0;
+}
+.accordion .header .title{
+    display:block;
+    float:left;
+    line-height:15px;
+    margin:17px 20px 0 0;
+    overflow:hidden;
+    white-space:nowrap;
+    width:137px;
+}
+.accordion .header .badge{
+    background:#373b40;
+    border-radius:10px;
+    box-shadow:0px 1px 0px 1px #707478;
+    display:none;
+    float:right;
+    font-size:10px;
+    margin:14px 15px 0 0;
+    padding:5px 0 5px 0;
+    text-align:center;
+    width:40px;
+}
+/*為了顯示數字而設定的flag:on,如果(訊息)數>0,則可使用on*/
+/*一般情況不加任何class而隱藏,此種狀況較多,因此為預設狀態*/
+.accordion .header .badge.on{
+    display:block;
+}
+.accordion ul{display:none;}
+.accordion ul li a{
+    background:#393d42;
+    border-top:1px solid #4e5257;
+    border-bottom:1px solid #2c2f32;
+    color:#fff;
+    display:block;
+    height:48px;
+    text-decoration:none;
+    outline:none;
+}
+.accordion ul li a .icon{
+    display:block;
+    float:left;
+    margin:17px 12px 0 52px;
+    width:13px;
+    height:13px;
+}
+.accordion ul li a .icon.default{
+    background:url(icon_white.png) no-repeat -456px -96px;
+}
+.accordion ul li a .icon.inbox{
+    background:url(icon_white.png) no-repeat -96px -24px;
+}
+.accordion ul li a .icon.outbox{
+    background:url(icon_white.png) no-repeat -168px -24px;
+}
+.accordion ul li a .icon.sent{
+    background:url(icon_white.png) no-repeat -168px -120px;
+}
+.accordion ul li a .icon.draft{
+    background:url(icon_white.png) no-repeat -24px -24px;
+}
+.accordion ul li a .icon.refresh{
+    background:url(icon_white.png) no-repeat -240px -24px;
+}
+.accordion ul li a .icon.star{
+    background:url(icon_white.png) no-repeat -120px 0;
+}
+.accordion ul li a .text{
+    display:block;
+    float:left;
+    line-height:15px;
+    margin:17px 12px 0 0;
+    overflow:hidden;
+    white-space:nowrap;
+    width:116px;
+}
+.accordion ul li a .badge{
+    background:#cdcdcd;
+    border-radius:10px;
+    color:#3b3f44;
+    display:none;
+    float:right;
+    font-size:10px;
+    margin:15px 15px 0 0;
+    padding:5px 0 5px 0;
+    text-align:center;
+    width:40px;
+}
+.accordion ul li a .badge.on{
+    display:block;
+}

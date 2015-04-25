@@ -1,0 +1,25 @@
+UI: Scroll to top / back to top
+
+動作：
+1. 頁面捲動後，fade in “Scroll to top”
+2. click “Scroll to top”後，頁面回到最頂端，“Scroll to top” fade out
+3. 無js狀況
+
+Note：
+1. 不可用$(document).scroll…(IE8會無法使用)，要用$(window).scroll…。
+2. “$('html, body').animate({scrollTop:0}, 1000);”
+而非 “$('body').animate({scrollTop:0}, 1000);”的原因是使firefox正常運作。
+3. scrollTop回傳值是指被捲動的區域被scroll的高度(or範圍)，而非scrollbar本身被scroll的範圍。
+
+Support：chrome, firefox, IE7/8/9
+htmlLint(done)
+cssLint(done)
+jsLint(done)
+
+Effort：1hr 45min
+
+參考資料：
+http://webdesignerwall.com/tutorials/animated-scroll-to-top
+
+Plugin：
+http://webdesignandsuch.com/10-jquery-back-to-top-link-solutions-for-websites/

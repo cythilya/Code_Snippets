@@ -1,0 +1,9 @@
+﻿.tabs{font-family:Arial, Helvetica, sans-serif;font-size:12px;}
+.tabs .tabs-nav li{background:#eee;border-left:1px solid #999;border-top:1px solid #999;border-right:1px solid #999;border-radius:3px 3px 0 0;float:left;margin-right:5px;margin-bottom:-1px;}
+.tabs .tabs-nav li a{color:#555;display:block;padding:9px 12px 9px 12px;text-decoration:none;white-space:nowrap;outline:none;}
+.tabs .tabs-nav li a:hover{color:#000;}
+.tabs .tabs-nav li:first-child{margin-left:5px;/*使用first-child:不要再使用class來專門加在tag上,這樣在寫html時還必須特別注意*/}
+.tabs .tabs-nav li.selected{background:#fff;border-bottom:1px solid #fff;}
+.tabs .tabs-nav li.selected a{color:#000;font-weight:bold;}
+.tabs .tab-panel{border:1px solid #999;min-height:300px;padding:5px 0 0 0;text-align:justify;word-wrap:break-word;}
+.tabs .tab-panel .tab-content{border-top:1px solid #999;padding:10px;}

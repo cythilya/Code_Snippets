@@ -1,0 +1,30 @@
+Requirement:
+ノㄓ浪代﹃い琌Τ才﹃ノㄓゑ癸把馒糶﹃いゑ癸┛菠糶琌才
+EX辨т﹃ "target"
+ゑ癸﹃"Target"(才)"tarGet"(才)"tarGET"(才)"TARGET"(才)"target"(才)"targetxyz"(ぃ才)
+
+Wireframe: none
+
+Snapshot: http://img716.imageshack.us/img716/7789/mgm1.png
+
+Effort: 2hr
+
+Bug: none
+
+Support: ff, chrome, ie789
+
+Learnt: 
+JavaScript test() Method
+The test() method tests for a match in a string.
+This method returns true if it finds a match, otherwise it returns false.
+
+Syntax: RegExpObject.test(string);
+EX: /^target$/i.test(str);
+EX: var pattern = /^target$/i;
+      pattern.test(str);
+
+Ref: http://www.w3schools.com/js/js_obj_array.asp
+
+Demo: http://cdpn.io/DdzGE
+
+Source Code: http://codepen.io/cythilya/pen/DdzGE
