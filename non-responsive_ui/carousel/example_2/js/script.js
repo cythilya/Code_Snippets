@@ -9,7 +9,7 @@
             pagination: false, //是否開啟pagination
             controlBtn: true, //是否開啟左右控制button
             autoRun: true,
-            quickSpeed: 400
+            quickSpeed: 1000
 		}, opts);
 		// main function
 		function init(obj) {
@@ -25,6 +25,7 @@
             function autoRun(){
                 setInterval(function(){
                     if(!stop){
+                        console.log('auto run');
                         var dCurrent = $(itemArray.shift());
                         dCurrent.clone().appendTo(dFrame);
                         itemArray.push(dCurrent);
@@ -111,7 +112,7 @@
 	// start
 	$(function() {
 		$('.js-slide').slider({
-            'autoRun' : false
+            'autoRun' : true
         });
 	});
 })(jQuery);
