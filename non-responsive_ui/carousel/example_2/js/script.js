@@ -4,12 +4,11 @@
 		var config = $.extend({}, {
 			speed: 1000, //移動速度
             waiting: 2000, //等待時間
-            start: -1140, //起始位置
+            quickSpeed: 1000, //利用prev/next button切換slide的速度
+            start: -1140, //起始位置(px)
             imageWidth: 560, //每次移動的距離(px)
-            pagination: false, //是否開啟pagination
             controlBtn: true, //是否開啟左右控制button
-            autoRun: true,
-            quickSpeed: 1000
+            autoRun: true //是否自動執行
 		}, opts);
 		// main function
 		function init(obj) {
@@ -122,8 +121,6 @@
 	};
 	// start
 	$(function() {
-		$('.js-slide').slider({
-            'autoRun' : true
-        });
+		$('.js-slide').slider();
 	});
 })(jQuery);
