@@ -1,7 +1,11 @@
 body{
 	width: 100%;
 }
-.hero{
+.slide{
+	width: 1700px;
+	height: 293px;
+	overflow: hidden;
+	margin: 0 auto;
 	.slider{
 		width: 560px;
 		margin: 0 auto;
@@ -33,19 +37,23 @@ body{
 			&.btnPrev{
 				background: url(btn_prev.png) no-repeat 0 0;
 				left: 10px;
+				&:hover{
+					opacity: 0.8;
+				}
+				&.disabled{
+					opacity: 0.5;
+				}
 			}
 			&.btnNext{
 				background: url(btn_next.png) no-repeat 0 0;
 				right: 10px;
+				&:hover{
+					opacity: 0.8;
+				}
+				&.disabled{
+					opacity: 0.5;
+				}
 			}
 		}
 	}
-	.mask{
-		background: url(bg_banner.png) center 0 repeat-x;
-		width: 100%;
-		height: 293px;
-		position: absolute;
-		top: 0;
-		z-index: 2;
-	}	
 }
