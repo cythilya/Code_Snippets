@@ -21,11 +21,21 @@
             var dPrevBtn = dSlider.find('.js-btnPrev');
             var dNextBtn = dSlider.find('.js-btnNext');
             var stop = false;
+            var reset = false;
 
             function autoRun(){
                 setInterval(function(){
                     if(!stop){
-                        console.log('auto run');
+                        if(reset){
+                            itemArray = [];
+                            dItemList = dSlider.find('.js-sliderItem');
+                            $.each( dItemList, function( key, value ) {
+                                $(value).clone().appendTo(dFrame);
+                                itemArray.push(value);
+                            });
+                            reset = false;
+                        }
+
                         var dCurrent = $(itemArray.shift());
                         dCurrent.clone().appendTo(dFrame);
                         itemArray.push(dCurrent);
@@ -50,6 +60,7 @@
             dPrevBtn.click(function(e){
                 e.preventDefault();
                 stop = true;
+                reset = true;
                 var dThisBtn = $(this);
                 if(!dThisBtn.hasClass('disabled')){
                     dThisBtn.addClass('disabled');
