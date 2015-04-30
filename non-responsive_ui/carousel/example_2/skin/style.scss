@@ -1,56 +1,50 @@
-.slide{
-	width: 1700px;
-	height: 293px;
-	overflow: hidden;
+.slider{
+	width: 560px;
 	margin: 0 auto;
-	.slider{
-		width: 560px;
-		margin: 0 auto;
-		position: relative;
-		.sliderList{
-			width: 10000px;
-			height: 293px;
-			position: absolute;
-			left: -560px;
-			z-index: 1;
-			overflow: hidden;
-			.sliderItem{
-				float: left;
-				margin-right: 10px;
-				.itemLink{
-					.itemImage{
-						display: block;
-					}
+	position: relative;
+	.sliderList{
+		width: 10000px;
+		height: 293px;
+		position: absolute;
+		left: -560px;
+		z-index: 1;
+		overflow: hidden;
+		.sliderItem{
+			float: left;
+			margin-right: 10px;
+			.itemLink{
+				.itemImage{
+					display: block;
 				}
 			}
 		}
-		.btn{
-			display: block;
-			width: 41px;
-			height: 41px;
-			position: absolute;
-			top: 126px;
-			z-index: 3;
-			outline: none;
-			&.btnPrev{
-				background: url(btn_prev.png) no-repeat 0 0;
-				left: 10px;
-				&:hover{
-					opacity: 0.8;
-				}
-				&.disabled{
-					opacity: 0.5;
-				}
+	}
+	.btn{
+		display: block;
+		width: 41px;
+		height: 41px;
+		position: absolute;
+		top: 126px;
+		z-index: 3;
+		outline: none;
+		&.btnPrev{
+			background: url(btn_prev.png) no-repeat 0 0;
+			left: 10px;
+			&:hover{
+				opacity: 0.8;
 			}
-			&.btnNext{
-				background: url(btn_next.png) no-repeat 0 0;
-				right: 10px;
-				&:hover{
-					opacity: 0.8;
-				}
-				&.disabled{
-					opacity: 0.5;
-				}
+			&.disabled{
+				opacity: 0.5;
+			}
+		}
+		&.btnNext{
+			background: url(btn_next.png) no-repeat 0 0;
+			right: 10px;
+			&:hover{
+				opacity: 0.8;
+			}
+			&.disabled{
+				opacity: 0.5;
 			}
 		}
 	}

@@ -12,8 +12,7 @@
 		}, opts);
 		// main function
 		function init(obj) {
-            var dSlide = $(obj)
-            var dSlider = dSlide.find('.js-slider');
+            var dSlider = $(obj);
             var dFrame = dSlider.find('.js-sliderList');
             var dItemList = dSlider.find('.js-sliderItem');
             var itemArray = [];
@@ -46,7 +45,7 @@
                 }, config.waiting);
             }
 
-            dSlide.on('mouseover mouseout', function(e){
+            dSlider.on('mouseover mouseout', function(e){
                 var dThisWrapper = $(this);
                 if(e.type == 'mouseover') {
                     stop = true;
@@ -121,6 +120,6 @@
 	};
 	// start
 	$(function() {
-		$('.js-slide').slider();
+		$('.js-slider').slider();
 	});
 })(jQuery);

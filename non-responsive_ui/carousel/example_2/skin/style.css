@@ -1,15 +1,9 @@
-.slide {
-  width: 1700px;
-  height: 293px;
-  overflow: hidden;
-  margin: 0 auto;
-}
-.slide .slider {
+.slider {
   width: 560px;
   margin: 0 auto;
   position: relative;
 }
-.slide .slider .sliderList {
+.slider .sliderList {
   width: 10000px;
   height: 293px;
   position: absolute;
@@ -17,14 +11,14 @@
   z-index: 1;
   overflow: hidden;
 }
-.slide .slider .sliderList .sliderItem {
+.slider .sliderList .sliderItem {
   float: left;
   margin-right: 10px;
 }
-.slide .slider .sliderList .sliderItem .itemLink .itemImage {
+.slider .sliderList .sliderItem .itemLink .itemImage {
   display: block;
 }
-.slide .slider .btn {
+.slider .btn {
   display: block;
   width: 41px;
   height: 41px;
@@ -33,23 +27,23 @@
   z-index: 3;
   outline: none;
 }
-.slide .slider .btn.btnPrev {
+.slider .btn.btnPrev {
   background: url(btn_prev.png) no-repeat 0 0;
   left: 10px;
 }
-.slide .slider .btn.btnPrev:hover {
+.slider .btn.btnPrev:hover {
   opacity: 0.8;
 }
-.slide .slider .btn.btnPrev.disabled {
+.slider .btn.btnPrev.disabled {
   opacity: 0.5;
 }
-.slide .slider .btn.btnNext {
+.slider .btn.btnNext {
   background: url(btn_next.png) no-repeat 0 0;
   right: 10px;
 }
-.slide .slider .btn.btnNext:hover {
+.slider .btn.btnNext:hover {
   opacity: 0.8;
 }
-.slide .slider .btn.btnNext.disabled {
+.slider .btn.btnNext.disabled {
   opacity: 0.5;
 }
