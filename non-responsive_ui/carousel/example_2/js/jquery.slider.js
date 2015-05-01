@@ -1,6 +1,6 @@
 (function($) {
 	$.fn.slider = function(opts) {
-		// default configuration
+		//default configuration
 		var config = $.extend({}, {
 			speed: 1000, //移動速度
             waiting: 2000, //等待時間
@@ -10,7 +10,7 @@
             controlBtn: true, //是否開啟左右控制button
             autoRun: true //是否自動執行
 		}, opts);
-		// main function
+		//main function
 		function init(obj) {
             var dSlider = $(obj);
             var dFrame = dSlider.find('.js-sliderList');
@@ -118,14 +118,16 @@
                 dNextBtn.hide();
             }
         }
-		// initialize every element
+		//initialize every element
 		this.each(function() {
 			init($(this));
 		});
 		return this;
 	};
-	// start
+	//auto start
+    /*
 	$(function() {
 		$('.js-slider').slider();
 	});
+    */
 })(jQuery);
