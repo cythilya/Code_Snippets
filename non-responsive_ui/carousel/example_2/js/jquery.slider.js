@@ -22,6 +22,7 @@
             var reset = false;
 
             function autoRun(){
+                var dCurrent;
                 setInterval(function(){
                     if(!stop){
                         if(reset){
@@ -34,7 +35,7 @@
                             reset = false;
                         }
 
-                        var dCurrent = $(itemArray.shift());
+                        dCurrent = $(itemArray.shift());
                         dCurrent.clone().appendTo(dFrame);
                         itemArray.push(dCurrent);
                         dFrame.animate({left: '-=' + config.imageWidth + 'px'}, config.speed, function(){
@@ -47,7 +48,8 @@
 
             dSlider.on('mouseover mouseout', function(e){
                 var dThisWrapper = $(this);
-                if(e.type == 'mouseover') {
+
+                if(e.type == 'mouseover'){
                     stop = true;
                 } 
                 else{ //mouseout
@@ -56,10 +58,12 @@
             });
 
             dPrevBtn.click(function(e){
+                var dThisBtn = $(this);
+
                 e.preventDefault();
                 stop = true;
                 reset = true;
-                var dThisBtn = $(this);
+                
                 if(!dThisBtn.hasClass('disabled')){
                     dThisBtn.addClass('disabled');
                     dFrame.animate({left: '+=' + config.imageWidth + 'px'}, config.quickSpeed, function(){
@@ -75,9 +79,11 @@
             });
 
             dNextBtn.click(function(e){
+                var dThisBtn = $(this);
+
                 e.preventDefault();
                 stop = true;
-                var dThisBtn = $(this);
+                
                 if(!dThisBtn.hasClass('disabled')){
                     dThisBtn.addClass('disabled');
                     var dCurrent =  dSlider.find('.js-sliderItem').eq(0);
