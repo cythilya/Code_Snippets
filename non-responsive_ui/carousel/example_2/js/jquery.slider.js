@@ -30,7 +30,6 @@
                             itemArray = [];
                             dItemList = dSlider.find('.js-sliderItem');
                             $.each(dItemList, function (key, value) {
-                                //$(value).clone().appendTo(dFrame);
                                 itemArray.push(value);
                             });
                             reset = false;
