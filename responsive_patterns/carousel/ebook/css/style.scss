@@ -1,0 +1,41 @@
+body{
+    background: #000;
+    overflow-y:hidden;
+}
+.ebook{
+    
+    width: 1536px;
+    height: 1024px;
+    margin: auto;
+    .nav{
+         position: absolute;
+         top: 0px;
+         left: 0px;
+        .toggle{
+            color: #fff;
+        }
+        .navList{
+            .navItem{
+                .navLink{
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .mainContent{
+        .wrapper{
+            .hiddenMenu{}
+            .frame{
+                position: absolute;
+                .item{
+                    float: left;
+                    .itemLink{}
+                    .image{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+}
