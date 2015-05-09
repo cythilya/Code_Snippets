@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+</head>
+<body>
+<div id="playground">
+typeof用於primitive(number, boolean, string，除了null/undefined) / function(){}.<br>
+判斷字串: typeof str === 'string' <br>
+判斷數字: typeof num === 'number' && !isNaN(num) <br>
+判斷布林: typeof flag === 'boolean' <br>
+判斷函式: typeof func === 'function' <br>
+The typeof works sufficiently well with primitive values (except null).<br>	
+The typeof can’t distinguish between objects.<br>
+object要用 [[Class]] 檢查.<br>
+客製化object要用 instanceof 檢查.<br>
+</div>
+<!--<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>-->
+<script>
+//special value
+console.log('typeof undefined: ' + typeof undefined); //"undefined", primitive 
+//string
+console.log('typeof "foo": ' + typeof "foo"); //"string", primitive 
+//number
+console.log('typeof 0: ' + typeof 0); //"number", primitive 
+console.log('typeof NaN: ' + typeof NaN); //"number", primitive, 要用isNaN()檢查
+//boolean
+console.log('typeof true: ' + typeof true); //"boolean", primitive 
+//function
+console.log('typeof function(){}: ' + typeof function(){}); //"function"
+//object
+console.log('typeof {}: ' + typeof {}); //"object"
+console.log('typeof null: ' + typeof null); //"object", 但null其實是primitive 
+console.log('typeof [2,3]: ' + typeof [2,3]); //"object"
+
+//a good use of typeof
+function f(x) {
+	if (typeof x == 'function') {
+    	// in case when x is a function
+  	} else {
+    	// in other cases
+  	}
+}
+
+//The typeof shouldn’t be used to check for variable existance.
+//不要使用typeof檢查jQuery是否存在
+if (typeof(jQuery) !== 'undefined'){
+	console.log('included jQuery.');
+	if (jQuery) { 
+		console.log('jQuery exists.');
+	}
+}
+else{
+	console.log('not include jQuery.');
+}
+
+//改用window.jQuery檢查jQuery是否存在
+if (window.jQuery !== undefined) {
+	console.log('included jQuery 2.');
+}
+else{
+	console.log('not include jQuery 2.');
+}
+
+//檢查各個object的類型 - Array, Date...
+var toClass = {}.toString // (1)
+console.log( toClass.call( [1,2] ) ) // [object Array]
+console.log( toClass.call( new Date ) ) // [object Date]
+
+function Animal(name) {
+  this.name = name
+}
+var animal = new Animal("Goofy")
+var classTest = {}.toString.apply( animal )
+console.log(classTest) // [object Object]
+
+//checking type for custom objects
+console.log( animal instanceof Animal ) // true
+
+//detect an array by using the instanceOf operator
+//It will not work if arr was created in another window or iframe and then passed into current window. That’s because each window has it’s own object hierarchy.
+var arr = [1,2,3]
+console.log(arr instanceof Array) // true
+
+/*
+typeof - Good for primitives and functions, it lies about null.
+[[Class]] - Exposed through {}.toString. Good for built-in object and primitives, excepts null and undefined.
+instanceof - Works for custom objects. Can be used for native objects too, but lies if they come from another frame/window.
+*/
+</script>
+</body>
+</html>
