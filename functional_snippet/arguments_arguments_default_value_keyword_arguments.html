@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+</head>
+<body>
+<div id="playground"></div>
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script>
+//get unnamed arguments
+function sayHi(){
+	for(var i=0; i<arguments.length; i++){
+		console.log('Hi, ' + arguments[i]);
+	}
+}
+sayHi('Alice', 'Nina', 'Apple');
+
+//default value
+function sayName(who) {
+	var who = who || 'me'; //if who is falsy, returns 'me'
+	console.log(who); 
+}
+sayName("John"); //John
+sayName(); //me
+
+//keyword arguments
+function showSize(options) {
+	var width = options.width || 200;
+	var height = options.height || 100;
+	console.log('size = ' + width + 'x' + height + '(px)');
+}
+
+var options = {
+	width: 200,
+	height: 100
+}
+showSize(options);
+</script>
+</body>
+</html>
