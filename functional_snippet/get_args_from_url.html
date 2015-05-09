@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+</head>
+<body>
+<!--<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>-->
+<script>
+var urlArgs = function(){
+	var args = {};
+	var query = location.search.substring(1);//start from 0, substring(start, end at #-1)
+	var pairs = query.split('&');//return array with splitted elements
+
+	for(var i = 0 ; i < pairs.length ; i++) {
+		var pos = pairs[i].indexOf('=');//start from 0, position of '='
+
+		if(pos == -1) {
+			continue;
+		}
+		else {
+			var name = pairs[i].substring(0, pos);
+			var value = pairs[i].substring(pos+1);//pairs[pos] = '='
+			value = decodeURIComponent(value);
+			args[name] = value;
+		}
+	}
+	console.log(args);
+	return args;
+};
+//---------------------------------------------------------------------
+//example
+urlArgs();
+</script>
+</body>
+</html>
