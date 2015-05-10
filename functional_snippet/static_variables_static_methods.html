@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+</head>
+<body>
+<div id="playground"></div>
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script>
+//static variable
+function f(){
+	f.count = ++f.count || 1;
+	console.log(f.count);
+}
+f(); //1
+f(); //2
+
+//static method
+function Animal(name){
+	Animal.count = ++Animal.count || 1;
+	this.name = name;
+}
+
+Animal.showCount = function(){
+	console.log(Animal.count);
+}
+
+var mouse = new Animal('Mouse');
+var elephant = new Animal('Elephant');
+
+Animal.showCount();
+</script>
+</body>
+</html>
