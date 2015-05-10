@@ -27,6 +27,7 @@ SP.module = {
             arrows: false,
             mobileFirst: true
         });
+		dModule.css('height', '200px');
     }
 };
 (function(){
