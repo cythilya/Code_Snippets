@@ -8,22 +8,21 @@
 <div id="playground"></div>
 <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 <script>
-function save(){
-	console.log('save!');
+//example 
+function decorator(func) {
+	return function() {
+    	return func.apply(this, arguments);
+  	}
 }
-function checkPermissionDecorator(f){
-	return function(){
-		if(1){
-			f();
-		}
-		else{
-			alert('Not an admin yet');
-		}
-	}
+ 
+function sum(a, b) {
+	return a + b;
 }
+ 
+var getSum = decorator(sum);
 
-save = checkPermissionDecorator(save);
-
+console.log( getSum(1,2) ); //3
+console.log( getSum(2,3) ); //5
 </script>
 </body>
 </html>
