@@ -1,5 +1,5 @@
 (function($) {
-    $.fn.scrollEffect = function(opts) {
+    $.fn.eBook = function(opts) {
         // default configuration
         var config = $.extend({}, {
             speed: 1000,
@@ -9,15 +9,54 @@
         function init(obj) {
             var dObj = $(obj);
             var dFrame = dObj.find('.frame');
+            var dNav = dObj.find('.nav');
             var dNavLink = dObj.find('.navLink');
+            var dToggle = dObj.find('.toggle');
+            var dCloseBtn = dObj.find('.btnClose');
+            var dSlide = dObj.find('.swipe');
             var startOrder = 1;
 
-            dObj.on('click', '.navLink', function(e){
-                e.preventDefault();
+            //頁面滑動
+            dNavLink.click(function(e){
                 var nowOrder = $(this).data('order');
                 var length = -(nowOrder - startOrder)*1024;
+                e.preventDefault();
                 dFrame.animate({top: length + 'px'}, config.speed); 
             });
+
+            //選單開關
+            dToggle.click(function(e){
+                e.preventDefault();
+                if(!dNav.hasClass('on')){
+                    dNav.addClass('on');
+                }
+                else{
+                    dNav.removeClass('on');
+                }
+            });
+
+            //關閉選單
+            dCloseBtn.click(function(e){
+                e.preventDefault();
+                if(!dNav.hasClass('on')){
+                    dNav.addClass('on');
+                }
+                else{
+                    dNav.removeClass('on');
+                }
+            });
+            
+            dSlide.slick({
+                dots: true,
+                adaptiveHeight: true,
+                arrows: false,
+                mobileFirst: true,
+                slidesToShow: 3,
+                slidesToScroll: 3           
+            });
+            //dSlide.css('height', '200px');
+
+
         }
         // initialize every element
         this.each(function() {
@@ -27,57 +66,6 @@
     };
     // start
     $(function() {
-        $('.ebook').scrollEffect();
+        $('.ebook').eBook();
     });
 })(jQuery);
-
-
-
-
-
-
-
-var SP = {};
-SP.module = {
-    version: '0.1',
-    namespace: function(ns_string){
-        var parts = ns_string.split('.'),
-            parent = SP,
-            i;
-        if (parts[0] === 'SP'){
-            parts = parts.slice(1);
-        }
-        for (i = 0; i < parts.length; i += 1){
-            if (typeof parent[parts[i]] === 'undefined') {
-                parent[parts[i]] = {};
-            }
-            parent = parent[parts[i]];
-        }
-        return parent;
-    },
-    inherit: function(Child, Parent){
-        Child.prototype = new Parent();
-    },
-    eBookNav: function(dModule){
-        var responsiveNav = document.getElementById('eBookNav');
-        //var responsiveNavBreakpoint = 2000000;
-
-        responsiveNav.addEventListener('click', function(){
-            responsiveNav.classList.toggle("is-open");
-            /*
-            if(window.innerWidth < responsiveNavBreakpoint){
-                responsiveNav.classList.toggle("is-open");
-            }
-            */
-        });
-    }
-};
-(function(){
-    var doWhileExist = function(ModuleID,objFunction){
-        var dTarget = document.getElementById(ModuleID);
-        if(dTarget){
-            objFunction(dTarget);
-        }                
-    };
-    doWhileExist('eBookNav',SP.module.eBookNav);
-})();
