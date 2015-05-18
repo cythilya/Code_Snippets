@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+</head>
+<body>
+<div id="playground"></div>
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script>
+var decoratorApp = decoratorApp || {};
+decoratorApp = {
+	default: {
+		validate: false,
+		limit: 5,
+		name: 'foo',
+		welcome: function(){
+			console.log('welcome');
+		}
+	},
+	option: {
+		validate: true,
+		name: 'bar',
+		helloWorld: function(){
+			console.log('hello');
+		}
+	},
+	setting: {},
+	printObj: function(obj){
+		var arr = [];
+		$.each(obj, function(index, value){
+			var next = index + ': ';
+			next += $isPlainObject(value) ? printObj(value) : value;
+			arr.push(next);
+		});
+		return '{' + arr.join(', ') + '}';
+	}
+};
+
+</script>
+</body>
+</html>
