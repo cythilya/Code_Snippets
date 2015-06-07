@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+</head>
+<body>
+<input type="checkbox" checked onclick="checkInput()">
+<script>
+//檢查是否勾選，IE8可用
+var input  = document.body.children[0]
+function checkInput (){
+	console.log( input.checked ); //true
+	console.log( input.getAttribute('checked') ); //empty string	
+}
+</script>
+</body>
+</html>
