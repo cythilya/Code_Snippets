@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+</head>
+<body>
+<div id="testDiv"><span id="testSpan"></span></div>
+<script>
+var testDiv = document.getElementById('testDiv');
+var testSpan = document.getElementById('testSpan');
+var newDiv = document.createElement('div');
+var textElement = document.createTextNode('Robin was here');
+var cloneTestDivWithDes = testDiv.cloneNode(true); //Clones an element deeply, with all descendants.
+var cloneTestDiv = testDiv.cloneNode(false); //Clones an element only, with attributes, but without children.
+var newTextNode = document.createTextNode('new text');
+var newDiv2 = document.createElement('div');
+newDiv2.innerHTML ='new div 2';
+var newDiv3 = document.createElement('div');
+newDiv3.innerHTML ='new div 3';
+var removingNode = document.createElement('div');
+removingNode.innerHTML = 'this node is removing...';
+var newDiv4 = document.createElement('div');
+newDiv4.innerHTML ='new div 4';
+
+//add element
+newDiv.innerHTML = 'a new div!';
+testDiv.appendChild(newDiv);
+
+//add text node
+testDiv.appendChild(newTextNode);
+
+//insert element
+//testDiv.insertBefore(newDiv2, newDiv);
+testDiv.insertBefore(newDiv2, null); //works as appendChild
+
+//insert after
+function insertAfter(elem, refElem){
+	var parent = refElem.parentNode;
+	var next = refElem.nextSibling;
+	if(next){
+		return parent.insertBefore(elem, next);
+	}
+	else {
+		return parent.appendChild(elem);
+	}
+
+};
+
+/*
+//parentElem.insertBefore(elem, nextSibling)
+function insertAfter(elem, refElem) {
+    return elem.parentNode.insertBefore(elem, refElem.nextSibling)
+}
+*/
+
+insertAfter(newDiv4, testSpan);
+
+//remove element
+testDiv.removeChild(newTextNode);
+testDiv.appendChild(removingNode);
+function remove(element){
+	var ele = element;
+	var parentNode = ele.parentNode;
+	var removeNode = parentNode.removeChild(ele);
+};
+remove(removingNode);
+
+//replace element
+testDiv.replaceChild(newDiv3, newDiv2);
+
+//re-order element
+testDiv.insertBefore(newDiv3, newDiv); //last, first
+
+
+
+</script>
+</body>
+</html>
