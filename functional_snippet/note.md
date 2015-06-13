@@ -4,6 +4,10 @@
 - [Ajax](ajax.html)
 - [Arguments: arguments, default value, keyword arguments](arguments.html)
 - [Arguments: get args from url](get_args_from_url.html)
+- [array handling](array_handling_201310281831)
+
+##B
+- [binay check and bitwise operator](binay_check_and_bitwise_operator)
 
 ##C
 - [cookie](jquery.cookie.js)
@@ -26,6 +30,7 @@
 ##M
 - [Modifying Document: createElement, createTextNode, cloneNode, appendChild, insertBefore, removeChild, replaceChild](modifying_document.html)
 - [Mobile: detect mobile](detect_mobile.txt)
+- [match string](match_string)
 
 ##N
 - [Notorious Closure Loop](notorious_closure_loop.html)
@@ -43,3 +48,4 @@
 
 ##T
 - [typeof: type detection](typeof.html)
+- [trim](trim_201308062236)
