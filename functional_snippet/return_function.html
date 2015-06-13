@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+<style>
+#playground{
+	width: 100px;
+	height: 100px;
+}	
+</style>
+</head>
+<body>
+<div id="playground"></div>
+<script>
+var setup = function(){
+	var count = 0;
+	return function(){
+		console.log(count++);
+	}
+};
+
+var mySetup = setup();
+mySetup();
+mySetup();
+mySetup();
+</script>
+</body>
+</html>

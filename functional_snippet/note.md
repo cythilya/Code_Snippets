@@ -16,6 +16,7 @@
 	- [callback](callback.html)
 	- [event listener](event_listener.html)
 	- [timeout](timeout.html): setTimeout, setInterval
+	- [return function](return_function.html): return a function(obj)
 
 ##D
 - [Decorator](decorators.html)
