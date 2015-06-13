@@ -1,4 +1,5 @@
-#Agenda
+#Functional Snippet
+具特定功能的函數。
 
 ##A
 - [Ajax](ajax.html)
