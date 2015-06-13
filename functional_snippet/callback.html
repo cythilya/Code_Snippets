@@ -3,10 +3,17 @@
 <head>
 <meta charset="utf-8">
 <title>$title</title>
+<style>
+#playground{
+	width: 100px;
+	height: 100px;
+}	
+</style>
 </head>
 <body>
 <div id="playground"></div>
 <script>
+//example 1
 var countUp = function(number){
 	var num = number;
 	for(var i=1; i<=num; i++){
@@ -33,7 +40,19 @@ var chooseNumer = function(callback){
 };
 
 chooseNumer(countUp(5));
-chooseNumer(countDown(10));
+chooseNumer(countDown(3));
+
+//example 2
+var myapp = {
+	color: 'green',
+	paint: function(node){
+		var thisNode = node;
+		thisNode.style.background = this.color;
+	}
+};
+
+myapp.paint(document.getElementById('playground'));
+
 </script>
 </body>
 </html>
