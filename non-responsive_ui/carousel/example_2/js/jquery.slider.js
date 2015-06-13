@@ -4,7 +4,7 @@
         //default configuration
         var config = $.extend({}, {
             speed: 1000, //移動速度
-            waiting: 2000, //等待時間
+            waiting: 4000, //等待時間
             quickSpeed: 1000, //利用prev/next button切換slide的速度
             start: -1140, //起始位置(px)
             imageWidth: 560, //每次移動的距離(px)
