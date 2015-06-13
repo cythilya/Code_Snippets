@@ -7,6 +7,7 @@
 
 ##C
 - [cookie](jquery.cookie.js)
+- [callback](callback.html)
 
 ##D
 - [Decorator](decorators.html)
