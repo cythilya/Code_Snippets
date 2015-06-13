@@ -22,20 +22,12 @@
 - [footer](footer_201308182230)
 - [form](form_201310270122)
 
-##H
-
 ##I
 - [image uploader](image_uploader_201310061629)
-
-##J
-
-##M
 
 ##N
 - [navigation](navigation)
 - [newsticker](newsticker)
-
-##P
 
 ##R
 - [responsive_layout](responsive_layout)
