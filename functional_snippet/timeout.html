@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+<style>
+#playground{
+	width: 100px;
+	height: 100px;
+}	
+</style>
+</head>
+<body>
+<div id="playground"></div>
+<script>
+//timeout: setTimeout, setInterval
+
+var thePlotThickens = function(){
+	console.log('500ms later');
+};
+
+setTimeout(thePlotThickens, 500); //execute once
+
+//setInterval(thePlotThickens, 1000); //execute every 1s
+
+</script>
+</body>
+</html>
