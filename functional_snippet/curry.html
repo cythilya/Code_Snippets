@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+<style>
+#playground{
+	width: 100px;
+	height: 100px;
+}	
+</style>
+</head>
+<body>
+<div id="playground"></div>
+<script>
+//function application - apply(obj, arg[]);
+console.log('--function application - apply(obj, arg[]);--');
+var sayHi = function(word){
+	console.log('Hi ' + word);
+};
+
+sayHi.apply(null, ['Apple']);
+
+var people = {
+	sayHello: function(who){
+		console.log('Hi ' + who);
+		return 'Hi ' + who;
+	}
+};
+people.sayHello('Pusheen');
+sayHi.apply(null, ['Cathy']);
+sayHi.call(null, 'Dolly');
+
+//partial function application
+console.log('--partial function application--');
+
+//curry
+console.log('--curry--');
+
+function add(x, y){
+	var oldx = x,
+		oldy = y;
+	if(typeof oldy === 'undefined'){
+		return function(newy){
+			return oldx + newy;
+		}
+	}
+	return x+y;
+};
+
+console.log(typeof add(5));
+console.log(add(3)(4));
+
+var add2000 = add(2000)
+console.log(add2000);
+console.log(add2000(10));
+
+
+</script>
+</body>
+</html>
