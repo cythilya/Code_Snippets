@@ -31,6 +31,7 @@
 - [input text](input_text.html)
 - [input checkbox](input_checked.html)
 - [Interface](interface.html)
+- [immediate funtion pattern](immediate_funtion_pattern.html)
 
 ##J
 - [json parse, json stringnify](json_parse_stringnify.html)
