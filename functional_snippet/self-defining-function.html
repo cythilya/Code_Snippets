@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+<style>
+#playground{
+	width: 100px;
+	height: 100px;
+}	
+</style>
+</head>
+<body>
+<div id="playground"></div>
+<script>
+var scareMe = function(){
+	console.log('Boo!');
+	scareMe = function(){
+		console.log('Double Boo!');
+	};
+};
+scareMe.property = 'properly';
+console.log('------1------');
+
+//scareMe(); //Boo!
+//scareMe(); //Bouble Boo!
+
+console.log('------2------');
+
+var prank = scareMe;
+
+var spooky = {
+	boo: scareMe
+};
+console.log('------3------');
+prank(); //Boo!
+prank(); //Boo!
+console.log(prank.property); //properly
+console.log('------4------');
+spooky.boo(); //Boo!
+spooky.boo(); //Boo!
+console.log(spooky.boo.property); //properly
+console.log('------5------');
+scareMe(); //Bouble Boo!
+scareMe(); //Bouble Boo!
+console.log(scareMe.property); //undefined
+
+</script>
+</body>
+</html>
