@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+<style>
+#playground{
+	width: 100px;
+	height: 100px;
+}	
+</style>
+</head>
+<body>
+<div id="playground"></div>
+<script>
+//immediate object init
+({
+	maxWidth: 600,
+	maxHeight: 400,
+	gimmeMax: function(){
+		return this.maxWidth + 'x' + this.maxHeight;
+	},
+	init: function(){
+		console.log(this.gimmeMax());
+	}
+}).init();
+
+({
+	maxWidth: 600,
+	maxHeight: 400,
+	gimmeMax: function(){
+		return this.maxWidth + 'x' + this.maxHeight;
+	},
+	init: function(){
+		console.log(this.gimmeMax());
+	}
+}.init());
+</script>
+</body>
+</html>
