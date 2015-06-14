@@ -41,6 +41,7 @@
 - [Modifying Document: createElement, createTextNode, cloneNode, appendChild, insertBefore, removeChild, replaceChild](modifying_document.html)
 - [Mobile: detect mobile](detect_mobile.txt)
 - [match string](match_string)
+- [memoization pattern](memoization_pattern.html)
 
 ##N
 - [Notorious Closure Loop](notorious_closure_loop.html)

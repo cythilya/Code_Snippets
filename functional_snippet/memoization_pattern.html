@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+<style>
+#playground{
+	width: 100px;
+	height: 100px;
+}	
+</style>
+</head>
+<body>
+<div id="playground"></div>
+<script>
+//memoization pattern
+var myFunc = function(para){
+	if(!myFunc.cache[para]){
+		var result = {};
+		result = Math.random();
+		myFunc.cache[para] = result;
+	}
+	return myFunc.cache[para];
+};
+myFunc.cache = {};
+//console.log(myFunc(1));
+</script>
+</body>
+</html>
