@@ -46,6 +46,7 @@
 
 ##N
 - [Notorious Closure Loop](notorious_closure_loop.html)
+- [namespace](namespace.html)
 
 ##P
 - [parentNode, children, childNodes, firstChild, lastChild, previousSibling, nextSibling](parentNode_children_childNodes_firstChild_lastChild_previousSibling_nextSibling.html)
