@@ -2,9 +2,9 @@
 具特定功能的函數。
 
 ##A
-- [Ajax](ajax.html)
-- [Arguments: arguments, default value, keyword arguments](arguments.html)
-- [Arguments: get args from url](get_args_from_url.html)
+- [ajax](ajax.html)
+- [arguments: arguments, default value, keyword arguments](arguments.html)
+- [arguments: get args from url](get_args_from_url.html)
 - [array handling](array_handling_201310281831)
 
 ##B
@@ -20,7 +20,7 @@
 - [curry](curry.html)
  
 ##D
-- [Decorator](decorators.html)
+- [decorator](decorators.html)
 
 ##E
 - [event listener](event_listener.html)
@@ -31,7 +31,7 @@
 ##I
 - [input text](input_text.html)
 - [input checkbox](input_checked.html)
-- [Interface](interface.html)
+- [interface](interface.html)
 - [immediate funtion pattern](immediate_funtion_pattern.html)
 - [immediate object init](immediate_object_init.html)
 
@@ -39,13 +39,13 @@
 - [json parse, json stringnify](json_parse_stringnify.html)
 
 ##M
-- [Modifying Document: createElement, createTextNode, cloneNode, appendChild, insertBefore, removeChild, replaceChild](modifying_document.html)
-- [Mobile: detect mobile](detect_mobile.txt)
+- [modifying Document: createElement, createTextNode, cloneNode, appendChild, insertBefore, removeChild, replaceChild](modifying_document.html)
+- [mobile: detect mobile](detect_mobile.txt)
 - [match string](match_string)
 - [memoization pattern](memoization_pattern.html)
 
 ##N
-- [Notorious Closure Loop](notorious_closure_loop.html)
+- [notorious Closure Loop](notorious_closure_loop.html)
 - [namespace](namespace.html)
 
 ##P
@@ -54,12 +54,12 @@
 - [private properties and methods](private_properties_and_methods.html)
 
 ##R
-- [Resize](resize.html)
-- [Redirect](redirect.html) - 導頁
+- [resize](resize.html)
+- [redirect](redirect.html) - 導頁
 
 ##S
-- [Static variables, static methods](static_variables_static_methods.html)
-- [Self-Defining Function / Lazy Function Definition](self-defining-function.html)
+- [static variables, static methods](static_variables_static_methods.html)
+- [self-defining function / lazy function definition](self-defining-function.html)
 
 ##T
 - [typeof: type detection](typeof.html)
