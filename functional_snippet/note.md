@@ -51,6 +51,7 @@
 ##P
 - [parentNode, children, childNodes, firstChild, lastChild, previousSibling, nextSibling](parentNode_children_childNodes_firstChild_lastChild_previousSibling_nextSibling.html)
 - [Prototype](prototype_1.html)
+- [private properties and methods](private_properties_and_methods.html)
 
 ##R
 - [Resize](resize.html)

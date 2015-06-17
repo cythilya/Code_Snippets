@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+</head>
+<body>
+<div id="playground"></div>
+<script>
+//Public Properties and Methods
+var myObj = {
+	myprop: 1,
+	getProp: function(){
+		return this.myprop;
+	}
+};
+console.log(myObj.myprop);
+console.log(myObj.getProp());
+
+function Gadget(){
+	this.name = 'iPod';
+	this.stretch = function(){
+		return 'iPad';
+	}
+}
+var toy = new Gadget();
+console.log(toy.name);
+console.log(toy.stretch);
+
+//Private properties and methods - implement them using a closure.
+function Gadget1(){
+	//private member
+	var name = 'iPod';
+	//public function
+	this.getName = function(){
+		return name;
+	};
+};
+var toy1 = new Gadget1();
+console.log(toy1.name);
+//public method has access to 'name'
+console.log(toy1.getName()); //'iPod'
+</script>
+</body>
+</html>
