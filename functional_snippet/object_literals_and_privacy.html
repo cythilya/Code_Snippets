@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+</head>
+<body>
+<div id="playground"></div>
+<script>
+//Object Literals and Privacy
+//private properties inside constructors and private properties in object literals
+function Gadget(){
+	//private member
+	var name = 'iPod';
+	//public function
+	this.getName = function(){
+		return name;
+	}
+};
+
+Gadget.prototype = (function(){
+	//private mamber
+	var browser = 'Mobile Webkit';
+	//public prototype members
+	return {
+		getBrowser: function(){
+			return browser;
+		}
+	}
+}());
+
+var toy = new Gadget();
+console.log(toy.getName());
+console.log(toy.getBrowser());
+
+
+</script>
+</body>
+</html>

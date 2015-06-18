@@ -49,6 +49,9 @@
 - [notorious Closure Loop](notorious_closure_loop.html)
 - [namespace](namespace.html)
 
+##O
+- [object literals and privacy](object_literals_and_privacy.html)
+
 ##P
 - [parentNode, children, childNodes, firstChild, lastChild, previousSibling, nextSibling](parentNode_children_childNodes_firstChild_lastChild_previousSibling_nextSibling.html)
 - [Prototype](prototype_1.html)
