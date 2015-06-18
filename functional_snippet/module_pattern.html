@@ -8,19 +8,24 @@
 <div id="playground"></div>
 <script>
 //module pattern
-var myobj = (function(){
+var myNamespace = (function(){
 	//private members
-	var name = 'my, oh my';
-
-	//implement the public part
+	var myPrivateVariable = 0;
+	var myPrivateMethod = function(someText){
+		console.log(someText);
+	};
+	//public members
 	return {
-		getName: function(){
-			return name;
+		myPublicVariable: 'foo',
+		myPublicFunction: function(bar){
+			myPrivateVariable++;
+			myPrivateMethod(bar);
 		}
 	};
 }());
-console.log(myobj.getName());
 
+console.log(myNamespace.myPublicVariable); //foo
+myNamespace.myPublicFunction('hi'); //hi
 </script>
 </body>
 </html>
