@@ -44,6 +44,7 @@
 - [match string](match_string)
 - [memoization pattern](memoization_pattern.html)
 - [module pattern](module_pattern.html)
+- [module pattern: jQuery](module_pattern_jquery.html)
 
 ##N
 - [notorious Closure Loop](notorious_closure_loop.html)
