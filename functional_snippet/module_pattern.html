@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+</head>
+<body>
+<div id="playground"></div>
+<script>
+//module pattern
+var myobj = (function(){
+	//private members
+	var name = 'my, oh my';
+
+	//implement the public part
+	return {
+		getName: function(){
+			return name;
+		}
+	};
+}());
+console.log(myobj.getName());
+
+</script>
+</body>
+</html>

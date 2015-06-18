@@ -43,6 +43,7 @@
 - [mobile: detect mobile](detect_mobile.txt)
 - [match string](match_string)
 - [memoization pattern](memoization_pattern.html)
+- [module pattern](module_pattern.html)
 
 ##N
 - [notorious Closure Loop](notorious_closure_loop.html)
