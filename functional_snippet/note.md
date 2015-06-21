@@ -18,6 +18,7 @@
 	- [timeout](timeout.html): setTimeout, setInterval
 	- [return function](return_function.html): return a function(obj)
 - [curry](curry.html)
+- [Code Reuse Patterns - Classical Inheritance - #1 The Default Pattern](code_reuse_patterns_classical_inheritance_1_the_d efault_pattern.html)
  
 ##D
 - [decorator](decorators.html)

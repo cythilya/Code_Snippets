@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+<style>
+</style>
+</head>
+<body>
+<div id="playground"></div>
+<script>
+//Code Reuse Patterns - Classical Inheritance - #1 The Default Pattern
+function Parent(name){
+	this.name = name || 'Adam';
+};
+
+Parent.prototype.say = function(){
+	return this.name;
+};
+
+function Child(name){
+	//empty
+};
+
+function inherit(C, P){
+	C.prototype = new P();
+};
+
+inherit(Child, Parent);
+
+var kid = new Child();
+console.log(kid.say());
+
+//kid.name = 'Lucky';
+//console.log(kid);
+
+//delete kid.name;
+//console.log(kid);
+
+var son = new Child('Lucky');
+console.log(son.say()); //'Adam'
+</script>
+</body>
+</html>
