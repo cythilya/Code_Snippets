@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+<style>
+#playground{
+	width: 100px;
+	height: 100px;
+}	
+</style>
+</head>
+<body>
+<div id="playground"></div>
+<script>
+//sandbox pattern
+function Sandbox() {
+	var args = Array.prototype.slice.call(arguments),
+		callback = args.pop(),
+		modules = (args[0] && typeof args[0]) === 'string' ? args : args[0],
+		i;
+
+	if(!(this instanceof Sandbox)){
+		return new Sandbox(modules, callback);
+	}
+
+	this.a = 1;
+	this.b = 2;
+
+	if(!modules || modules === '*'){
+		modules = [];
+		for( i in Sandbox.modules){
+			if(Sandbox.modules.hasOwnProperty(i)){
+				modules.push(i);
+			}
+		}
+	}
+
+	for(i = 0 ; i < modules.length ; i++){
+		Sandbox.module[modules[i]](this);
+	}
+	callbacK(this);
+};
+
+Sandbox.prototype = {
+	name: 'My Application',
+	version: '1.0',
+	getName: function(){
+		return this.name;
+	}
+};
+
+
+//add module
+Sandbox.module = {};
+Sandbox.module.dom = function(box){
+	box.getElement = function(){};
+	box.getStyle = function(){};
+	box.foo = 'bar';
+};
+
+Sandbox.module.event = function(box){
+	box.attachEvent = function(){};
+	box.dettachEvent = function(){};
+};
+
+Sandbox.module.ajax = function(box){
+	box.makeRequest = function(){};
+	box.getRequest = function(){};
+};
+</script>
+</body>
+</html>

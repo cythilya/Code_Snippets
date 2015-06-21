@@ -65,6 +65,7 @@
 ##S
 - [static variables, static methods](static_variables_static_methods.html)
 - [self-defining function / lazy function definition](self-defining-function.html)
+- [sandbox](sandbox.html)
 
 ##T
 - [typeof: type detection](typeof.html)
