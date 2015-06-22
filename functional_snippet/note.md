@@ -19,6 +19,7 @@
 	- [return function](return_function.html): return a function(obj)
 - [curry](curry.html)
 - [Code Reuse Patterns - Classical Inheritance - #1 The Default Pattern](code_reuse_patterns_classical_inheritance_1_the_d efault_pattern.html)
+- [Code Reuse Patterns - Classical Inheritance - Rent and Set Prototype](code_reuse_patterns_classical_inheritance_3_rent_and_set_prototype.html)
  
 ##D
 - [decorator](decorators.html)

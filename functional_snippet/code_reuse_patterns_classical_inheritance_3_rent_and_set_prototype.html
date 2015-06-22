@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+<style>
+</style>
+</head>
+<body>
+<div id="playground"></div>
+<script>
+//Classical Pattern #3 - Rent and Set Prototype
+function Parent(name){
+	this.name = name || 'Adam';
+};
+
+Parent.prototype.say = function(){
+	return this.name;
+};
+
+//(1) 借用建構式，複製父建構式中加至this的屬性
+function Child(name){
+	var arguments = [];
+	arguments.push(name);
+	Parent.apply(this, arguments);
+};
+
+//(2) 取得prototype的成員
+function inherit(C, P){
+	C.prototype = new P(); //(2)
+};
+
+inherit(Child, Parent);
+
+var son = new Child('Lucky'); //(3)
+console.log(son.say()); //'Lucky'
+
+delete son.name;
+console.log(son.say()); //'Adam'
+
+//多重繼承
+//Note: 任何重複的屬性都是最後的贏
+function Cat(){
+	this.legs = 4;
+	this.say = function(){
+		return 'mmeaowww';
+	};
+};
+
+function Bird(){
+	this.legs = 2;
+	this.fly = true;
+};
+
+function Mix(){
+	Cat.apply(this);
+	Bird.apply(this);
+};
+
+var animal = new Mix();
+console.log(animal);
+
+
+</script>
+</body>
+</html>
