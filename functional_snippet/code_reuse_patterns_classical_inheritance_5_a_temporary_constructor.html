@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+</head>
+<body>
+<div id="playground"></div>
+<script>
+//Classical Pattern #5 - A Temporary Constructor
+function Parent(name){
+	this.name = name || 'Adam';
+};
+
+Parent.prototype.say = function(){
+	return this.name;
+};
+
+function Child(name){
+	var arguments = [];
+	arguments.push(name);
+	Parent.apply(this, arguments);
+};
+
+var inherit = (function(C, P){
+	var F = function(){};
+	return function(C, P){
+		F.prototype = P.prototype; //(4) -> (1)
+		C.prototype = new F(); //(3) -> (4)
+		C.uber = P.prototype;
+		C.prototype.constructor = C;
+	};
+})();
+
+inherit(Child, Parent);
+
+var kid = new Child('Lucky'); 
+console.log(kid.name); //'Lucky'
+console.log(kid.say()); //'Lucky
+console.log(kid.constructor.name); //Child
+console.log(kid.constructor); //function Child(name)
+</script>
+</body>
+</html>

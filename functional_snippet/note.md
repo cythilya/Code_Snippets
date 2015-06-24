@@ -21,6 +21,7 @@
 - [Code Reuse Patterns - Classical Inheritance - #1 The Default Pattern](code_reuse_patterns_classical_inheritance_1_the_d efault_pattern.html)
 - [Code Reuse Patterns - Classical Inheritance - Rent and Set Prototype](code_reuse_patterns_classical_inheritance_3_rent_and_set_prototype.html)
 - [Code Reuse Patterns - Classical Pattern #4 - Share the Prototype](code_reuse_patterns_classical_inheritance_4_rent_and_share_the_prototype.html)
+- [Code Reuse Patterns - #5 - A Temporary Constructor](code_reuse_patterns_classical_inheritance_5_a_temporary_constructor.html)
 - [Code Reuse Patterns - Klass](code_reuse_patterns_klass.html)
  
 ##D
