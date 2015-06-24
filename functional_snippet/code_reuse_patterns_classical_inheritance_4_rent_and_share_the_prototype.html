@@ -3,8 +3,6 @@
 <head>
 <meta charset="utf-8">
 <title>$title</title>
-<style>
-</style>
 </head>
 <body>
 <div id="playground"></div>
@@ -30,19 +28,16 @@ function inherit(C, P){
 
 inherit(Child, Parent);
 
-var son = new Child('Lucky'); //'Lucky'
-console.log(son.say());
+var son = new Child('Lucky'); 
+console.log(son.say()); //'Lucky'
 
 Child.prototype.say = function(){
 	return 'Apple'
 };
-console.log(son.say()); //被修改了...
+console.log(son.say()); //'Apple'，被修改了...一旦孩子修改了prototype，其繼承的父輩的prototype都會被修改到。
 
 var child = new Child();
 console.log(child.say()); //預期是'Adam，結果得到被修改後的'Apple'
-
-//delete son.name;
-//console.log(son.say());
 </script>
 </body>
 </html>
