@@ -25,6 +25,7 @@
 - [Code Reuse Patterns - Klass](code_reuse_patterns_klass.html)
 - [Code Reuse Patterns - Prototypal Inheritance](code_reuse_patterns_prototypal_inheritance.html)
 - [Code Reuse Patterns - Inheritance by Copying Properties](code_reuse_patterns_inheritance_by_copying_properties.html)
+- [Code Reuse Patterns - Mix-ins](code_reuse_patterns_mixins.html)
  
 ##D
 - [decorator](decorators.html)
