@@ -24,6 +24,7 @@
 - [Code Reuse Patterns - #5 - A Temporary Constructor](code_reuse_patterns_classical_inheritance_5_a_temporary_constructor.html)
 - [Code Reuse Patterns - Klass](code_reuse_patterns_klass.html)
 - [Code Reuse Patterns - Prototypal Inheritance](code_reuse_patterns_prototypal_inheritance.html)
+- [Code Reuse Patterns - Inheritance by Copying Properties](code_reuse_patterns_inheritance_by_copying_properties.html)
  
 ##D
 - [decorator](decorators.html)

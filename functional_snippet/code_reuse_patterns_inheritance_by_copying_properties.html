@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+</head>
+<body>
+<div id="playground"></div>
+<script>
+//Inheritance by Copying Properties
+function extend(parent, child) {
+	var i,
+		toStr = Object.prototype.toString,
+		astr = "[object Array]";
+
+	child = child || {};
+
+	for (i in parent) {
+		if (parent.hasOwnProperty(i)) {
+			if (typeof parent[i] === "object") {
+				child[i] = (toStr.call(parent[i]) === astr) ? [] : {};
+				extend(parent[i], child[i]);
+			} else {
+				child[i] = parent[i];
+			}
+		}
+	}
+	return child;
+};
+
+var dad = {
+	name: 'Adam',
+	counts: [1, 2, 3],
+	reads: {paper: true}
+};
+var kid = extend(dad);
+console.log(kid); //Object {name: "Adam", counts: Array[3], reads: Object}
+
+</script>
+</body>
+</html>
