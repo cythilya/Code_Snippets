@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+</head>
+<body>
+<div id="playground"></div>
+<script>
+//Prototypal Inheritance
+function obj(o){
+	function F(){};
+	F.prototype = o; //-----------------(1)
+	return new F(); //------------------(2)
+};
+
+var parent = {
+	name: 'Papa'
+};
+
+var child = obj(parent);
+child.name = 'Lucky';
+console.log(child.name); //'Lucky'
+
+var son = obj(parent);
+console.log(son.name); //'Papa'
+</script>
+</body>
+</html>
