@@ -31,6 +31,7 @@
 ##D
 - [decorator](decorators.html)
 - [Design Pattern - Singleton](design_pattern_singleton.html)
+- [Design Pattern - Factory](design_pattern_factory.html)
 
 ##E
 - [event listener](event_listener.html)
