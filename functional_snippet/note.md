@@ -30,7 +30,7 @@
  
 ##D
 - [decorator](decorators.html)
-- [Design Pattern - Singleton](design_patternsingleton.html)
+- [Design Pattern - Singleton](design_pattern_singleton.html)
 
 ##E
 - [event listener](event_listener.html)
