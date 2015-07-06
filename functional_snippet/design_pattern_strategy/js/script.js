@@ -1,23 +1,23 @@
 var validator = {
-	types: {}, // all available checks
-	messages: [], // error messages in the current validation session
-	config: {}, // current validation config name: validation type
+	types: {}, //all available checks
+	messages: [], //error messages in the current validation session
+	config: {}, //current validation config name: validation type
 	validate: function (data) { // the interface method 'data' is key => value pairs
 		var i, 
 			msg, 
 			type, 
 			checker, 
 			result_ok;
-		this.messages = []; // reset all messages
+		this.messages = []; //reset all messages
 
 		for(i in data) {
 			if(data.hasOwnProperty(i)) {
 				type = this.config[i];
 				checker = this.types[type];
 				if(!type) {
-					continue; // no need to validate
+					continue; //no need to validate
 				}
-				if(!checker) { // uh-oh
+				if(!checker) { 
 					throw {
 						name: "ValidationError",
 						message: "No handler to validate type " + type
@@ -61,16 +61,16 @@ validator.types.isAlphaNum = {
 
 //test
 var data = {
-	first_name:"Super",
-	last_name:"Man",
-	age:"unknown",
-	username:"o_O"
+	first_name: "Super",
+	last_name: "Man",
+	age: "unknown",
+	username: "o_O"
 };
 
 validator.config = {
-	first_name:'isNonEmpty',
-	age:'isNumber',
-	username:'isAlphaNum'
+	first_name: 'isNonEmpty',
+	age: 'isNumber',
+	username: 'isAlphaNum'
 };
 
 validator.validate(data);
