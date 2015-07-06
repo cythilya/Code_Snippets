@@ -84,7 +84,6 @@ validator.types.maxSize = {
 	instructions: 'max size is 10 characters'
 };
 
-
 /***
 validate types:
 	- isNonEmpty
