@@ -34,6 +34,7 @@
 - [Design Pattern - Factory](design_pattern_factory.html)
 - [Design Pattern - Iterator](design_pattern_iterator.html) 
 - [Design Pattern - Strategy](design_pattern_strategy)
+- [Design Pattern - Observer](design_pattern_observer)
 
 ##E
 - [event listener](event_listener.html)
