@@ -25,6 +25,7 @@ UI元件。
 
 ##I
 - [image uploader](image_uploader_201310061629)
+- [image align center](image_align_center.html) - 圖片上下左右置中
 
 ##N
 - [navigation](navigation)
