@@ -1,3 +1,9 @@
+$closeBtnWidth: 60px;
+$closeBtnHeight: 60px;
+$closeBtnImageURL: "../images/button/btn_popup_close.png";
+$closeBtnPosRight: 0;
+$closeBtnPosTop: 0;
+
 .customPopup{
 	color: #000;
 	font-family: "微軟正黑體";
@@ -6,7 +12,6 @@
 	&.ui-corner-all, &.ui-corner-top, &.ui-corner-bottom, &.ui-corner-right, &.ui-corner-br{
 		border-radius: 0;
 	}
-
 	&.ui-dialog .ui-dialog-titlebar{
 		background: #fff;
 		border: 0px solid #e78f08;
@@ -19,17 +24,33 @@
 	&.ui-dialog .ui-dialog-title{
 		margin: 0;
 	}
-	.ui-dialog-titlebar-close{
-		span{
-			margin: 0;
-		}
+	&.ui-dialog .ui-dialog-titlebar-close{
+		background: none;
+		margin: 0;
+		padding: 0;
+		border-radius: 0;
 	}
-	.ui-widget-header.ui-icon{
-
+	&.ui-dialog .ui-dialog-content{
+		padding: 0;
 	}
 	&.ui-widget-content{
 		background: #fff;
 		border: 1px solid #000;
+	}
+	.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus {
+	    border: 0px solid #fbcb09;
+	    background: none;
+	    font-weight: normal;
+	    color: #fff;
+	}	
+	.ui-dialog-titlebar-close{
+		span{
+			background: none;
+			margin: 0;
+		}
+	}
+	.ui-icon-closethick{
+		background: none;
 	}
 
 	/* Custom */
@@ -43,11 +64,69 @@
 				margin: 0 0 0 47px;
 				padding: 0 0 0 10px;
 			}
-			.ui-dialog-titlebar-close{}
+			.ui-dialog-titlebar-close{
+				background: url($closeBtnImageURL) 0 0 no-repeat;
+				width: $closeBtnWidth;
+				height: $closeBtnHeight;
+				right: $closeBtnPosRight;
+				top: $closeBtnPosTop;
+				.ui-icon{
+					width: $closeBtnWidth;
+					height: $closeBtnHeight;
+				}
+			}
+			.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus {
+			    background-position: 0px ($closeBtnHeight)*-1;
+			}
 		}
 		&.ui-widget-content{
 			border: 7px solid #606060;
 
+		}
+		.mainContent{
+			.inner{
+				padding: 25px 0 0 0;
+				.panel{
+					margin: 15px 45px 0 45px;
+					max-height: 390px;
+					overflow-y: auto;	
+					.section{
+						line-height: 28px;
+						padding: 0 10px;
+						.heading{
+							color: #bd0000;
+							font-size: 18px;
+							margin: 0 0 5px 0;
+						}
+						.content{
+							color: #000;
+							font-size: 15px;
+						}
+					}									
+				}
+				.control{
+					text-align: center;
+					margin: 30px 0 0 0;
+					.btnDefault{
+						color: #fff;
+						display: inline-block;
+						font-size: 20px;
+						width: 305px;
+						height: 24px;
+						line-height: 24px;
+						padding: 10px 0 10px 0;
+						text-align: center;
+						text-decoration: none;
+						margin: 0 10px;
+						&.btnCancel{
+							background: #969696;
+						}
+						&.btnConfirm{
+							background: #416898;
+						}
+					}
+				}
+			}
 		}
 
 	}
