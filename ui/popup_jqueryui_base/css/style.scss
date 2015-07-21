@@ -1,0 +1,55 @@
+.customPopup{
+	color: #000;
+	font-family: "微軟正黑體";
+	font-size: 13px;
+	padding: 0;
+	&.ui-corner-all, &.ui-corner-top, &.ui-corner-bottom, &.ui-corner-right, &.ui-corner-br{
+		border-radius: 0;
+	}
+
+	&.ui-dialog .ui-dialog-titlebar{
+		background: #fff;
+		border: 0px solid #e78f08;
+		font-weight: normal;
+		padding: 0;
+		&.ui-widget-header{
+			color: #000;
+		}		
+	}
+	&.ui-dialog .ui-dialog-title{
+		margin: 0;
+	}
+	.ui-dialog-titlebar-close{
+		span{
+			margin: 0;
+		}
+	}
+	.ui-widget-header.ui-icon{
+
+	}
+	&.ui-widget-content{
+		background: #fff;
+		border: 1px solid #000;
+	}
+
+	/* Custom */
+	&.keystonePopup{
+		.ui-dialog-titlebar{
+			padding: 24px 0 0 0;
+			.ui-dialog-title{
+				border-left: 7px solid #3b5998;
+				font-size: 25px;
+				line-height: 25px;
+				margin: 0 0 0 47px;
+				padding: 0 0 0 10px;
+			}
+			.ui-dialog-titlebar-close{}
+		}
+		&.ui-widget-content{
+			border: 7px solid #606060;
+
+		}
+
+	}
+}
+
