@@ -31,6 +31,9 @@ UI元件。
 - [navigation](navigation)
 - [newsticker](newsticker)
 
+##P
+- [popup](popup_jqueryui_base) - 覆寫jquery ui
+
 ##R
 - [responsive_layout](responsive_layout)
 
