@@ -33,6 +33,7 @@
 - [Design Pattern - Singleton](design_pattern_singleton.html)
 - [Design Pattern - Factory](design_pattern_factory.html)
 - [Design Pattern - Iterator](design_pattern_iterator.html) 
+- [Design Pattern - Decorator](design_pattern_decorator.html) 
 
 ##E
 - [event listener](event_listener.html)
