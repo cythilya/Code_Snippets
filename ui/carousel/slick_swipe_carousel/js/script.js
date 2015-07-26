@@ -25,9 +25,7 @@ SP.module = {
             dots: true,
             adaptiveHeight: true,
             arrows: false,
-            mobileFirst: true,
-			slidesToShow: 3,
-			slidesToScroll: 3			
+            mobileFirst: true
         });
 		dModule.css('height', '200px');
     }
