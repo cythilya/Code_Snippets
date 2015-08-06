@@ -1,38 +1,38 @@
-﻿$tabNavFontSize: 12px;
-$tabNavDefaultBackground: #eee;
-$tabNavDefaultFontColor: #555;
-$tabNavSelectedBackground: #fff;
-$tabNavSelectedFontColor: #000;
-.tabs{
+﻿$tabVerticalNavFontSize: 12px;
+$tabVerticalNavDefaultBackground: #eee;
+$tabVerticalNavDefaultFontColor: #555;
+$tabVerticalNavSelectedBackground: #fff;
+$tabVerticalNavSelectedFontColor: #000;
+.tabsvertical{
 	font-family: "微軟正黑體";
 	width: 1240px;
 	.tabs-nav {
 		width: 240px;
 		float: left;
 		.tab-nav-item{
-			background: $tabNavDefaultBackground;
+			background: $tabVerticalNavDefaultBackground;
 			border-left: 1px solid #999;
 			border-top: 1px solid #999;
 			.tab-nav-link{
-				font-size: $tabNavFontSize;
-				color: $tabNavDefaultFontColor;
+				font-size: $tabVerticalNavFontSize;
+				color: $tabVerticalNavDefaultFontColor;
 				display: block;
 				padding: 9px 12px 9px 12px;
 				text-decoration: none;
 				white-space: nowrap;
 				outline: none;
 				&:hover{
-					color: $tabNavSelectedFontColor;
+					color: $tabVerticalNavSelectedFontColor;
 				}
 				&:first-child{
 					margin-left:5px;
 				}
 			}
 			&.selected{
-				background: $tabNavSelectedBackground;
+				background: $tabVerticalNavSelectedBackground;
 				border-bottom: 1px solid #fff;
 				.tab-nav-link{
-					color: $tabNavSelectedFontColor;
+					color: $tabVerticalNavSelectedFontColor;
 					font-weight:bold;
 				}
 			}
