@@ -34,29 +34,30 @@ var dialogObject =
     '		</div>',    
     '   </div>',
     '</div>'].join('')).dialog({
-        dialogClass: 'customPopup keystonePopup',
-        modal: true,
-        resizable: false,
-        draggable: false,
-        width: 902,
-        height: 597,
-        title: '購物約定條款',
-        open: function () {
-            var dDialogSelf = $(this);
+	dialogClass: 'customPopup keystonePopup',
+	modal: true,
+	resizable: false,
+	draggable: false,
+	width: 902,
+	height: 597,
+	title: '購物約定條款',
+	open: function () {
+		var dDialogSelf = $(this);
 
-            //cancel
-            dDialogSelf.on('click', '.cancel', function (e) {
-                e.preventDefault();
-                dDialogSelf.dialog('close');
-            });
-        },
-        close: function () {
-            var dDialogSelf = $(this);
-            dDialogSelf.hide();
-        }
-    });
+		//cancel
+		dDialogSelf.on('click', '.cancel', function (e) {
+			e.preventDefault();
+			dDialogSelf.dialog('close');
+		});
+	},
+	close: function () {
+		var dDialogSelf = $(this);
+		dDialogSelf.destroy();
+		//dDialogSelf.hide();
+	}
+});
 
-    dialogObject.dialog('open');
+dialogObject.dialog('open');
 </script>
 </body>
 </html>

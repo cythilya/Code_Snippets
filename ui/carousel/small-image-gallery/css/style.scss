@@ -1,0 +1,450 @@
+/* variables */
+$fontSizeHeading: 25px;
+$fontSizeFirstHeading: 20px;
+$fontSizeSecondHeading: 18px;
+$fontSizeThirdHeading: 17px;
+$fontSizeFourthHeading: 16px;
+$fontSizeFirstContent: 15px;
+$fontSizeSecondContent: 14px;
+$fontSizeThirdContent: 13px;
+$fontSizeFourthContent: 12px;
+$fontSizeFifthContent: 10px;
+$divideSpace: 10px;
+
+.previewArea{
+	margin: $divideSpace 0 0 0;
+	.imageList{
+		width: 318px;
+		height: 100px;
+		float: left;
+		overflow: hidden;
+		position: relative;
+		.imageListFrame{
+			position: absolute;
+			width: 10000px;
+			.imageItem{
+				border: 1px solid #ececec;
+				float: left;
+				margin: 0 2px 0 2px;
+				cursor: pointer;
+				&.video{
+					position: relative;
+					.videoMask{
+						background: url(../images/icon/icon_video.png) no-repeat center center;
+						width: 100px;
+						height: 100px;
+						position: absolute;
+						z-index: 2;
+					}
+				}
+				.thumbnail{
+					display: block;
+					float: left;
+					width: 100px;
+					height: 100px;
+				}
+			}
+		}
+	}
+	.btnPrev{
+		background: url(../images/button/btn_prev_next.png) no-repeat 0 30px #fff;
+		width: 16px;
+		height: 100px;
+		display: block;
+		float: left;
+		&.off{
+			opacity: 0.5;
+			cursor: not-allowed
+		}
+	}
+	.btnNext{
+		background: url(../images/button/btn_prev_next.png) no-repeat -16px 30px #fff;
+		width: 16px;
+		height: 100px;
+		display: block;
+		float: left;
+		&.off{
+			opacity: 0.5;
+			cursor: not-allowed
+		}							
+	}
+}
+
+$closeBtnWidth: 60px;
+$closeBtnHeight: 60px;
+$closeBtnImageURL: "../images/button/btn_popup_close.png";
+$closeBtnPosRight: 0;
+$closeBtnPosTop: 0;
+
+/* jquery ui 覆寫 */
+.customPopup{
+	color: #000;
+	font-family: "微軟正黑體";
+	font-size: $fontSizeThirdContent;
+	padding: 0;
+	&.ui-corner-all, &.ui-corner-top, &.ui-corner-bottom, &.ui-corner-right, &.ui-corner-br{
+		border-radius: 0;
+	}
+	&.ui-dialog .ui-dialog-titlebar{
+		background: #fff;
+		border: 0px solid #e78f08;
+		font-weight: normal;
+		padding: 0;
+		&.ui-widget-header{
+			color: #000;
+		}		
+	}
+	&.ui-dialog .ui-dialog-title{
+		margin: 0;
+	}
+	&.ui-dialog .ui-dialog-titlebar-close{
+		background: none;
+		border-radius: 0;
+		margin: 0;
+		padding: 0;
+	}
+	&.ui-dialog .ui-dialog-content{
+		padding: 0;
+	}
+	&.ui-widget-content{
+		background: #fff;
+		border: 1px solid #000;
+	}
+	.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus {
+	    background: none;
+	    border: 0px solid #fbcb09;
+	    color: #fff;
+	    font-weight: normal;
+	}	
+	.ui-dialog-titlebar-close{
+		span{
+			background: none;
+			margin: 0;
+		}
+	}
+	.ui-icon-closethick{
+		background: none;
+	}
+
+	/* customize */
+	&.keystonePopup{
+		.ui-dialog-titlebar{
+			padding: 24px 0 0 0;
+			.ui-dialog-title{
+				border-left: 7px solid #3b5998;
+				font-size: 25px;
+				line-height: 25px;
+				margin: 0 0 0 47px;
+				padding: 0 0 0 $divideSpace;
+			}
+			.ui-dialog-titlebar-close{
+				background: url($closeBtnImageURL) 0 0 no-repeat;
+				width: $closeBtnWidth;
+				height: $closeBtnHeight;
+				right: $closeBtnPosRight;
+				top: $closeBtnPosTop;
+				.ui-icon{
+					width: $closeBtnWidth;
+					height: $closeBtnHeight;
+				}
+			}
+			.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus {
+			    background-position: 0px ($closeBtnHeight)*-1;
+			}
+		}
+		&.ui-widget-content{
+			border: 7px solid #606060;
+		}
+		.mainContent{
+			.inner{
+				padding: 25px 0 0 0;
+				.panel{
+					margin: 15px 45px 0 45px;
+					max-height: 390px;
+					overflow-y: auto;	
+					&.large{
+						max-height: 600px;
+					}
+					.section{
+						line-height: 28px;
+						padding: 0 $divideSpace 0 $divideSpace;
+						&.login{
+							float: left;
+							.title{
+								margin: 0 0 20px 0;
+							}
+							.fieldList{
+								width: 349px;
+								margin: 0;
+								.fieldItem{
+									float: none;
+									text-align: left;
+									.textField{
+										width: 327px;
+										&.verifyCode{
+											float: left;
+											width: 162px;
+										}
+									}
+									&.note{
+										color: #686868;
+										font-size: $fontSizeThirdContent;
+										margin: 20px 0 0 0;
+									}
+									.verifyCodeImg{
+										float: left;
+										margin: 4px 6px 0 6px;
+										img{
+											display: block;
+										}
+									}
+									.btnRefreshVerifyCode{
+										background: #a4a4a4;
+										color: #fff;
+										display: block;
+										float: left;
+										font-size: $fontSizeFourthHeading;
+										line-height: 16px;
+										width: 90px;
+										height: 16px;
+										padding: 7px 0;
+										text-align: center;
+										text-decoration: none;
+									}
+									#rememberMe{
+										float: left;
+										display: block;
+										margin: 1px 5px 0 0
+									}
+									.text{
+										float: left;
+										display: block;
+										line-height: 13px;
+									}
+								}
+							}
+							.control{
+								margin: 20px 0 0 0;
+							}
+							.function{
+								margin: 10px 0 0 0;
+								.link{
+									color: #686868;
+									font-size: $fontSizeThirdContent;
+									text-decoration: none;
+									&.retreiveAccount{
+										&:after{
+											color: #ddd;
+											content: "   |   ";
+										}
+									}
+									&.signup{
+										color: #bd0000;
+										text-decoration: underline;
+									}
+								} 
+								.hint{
+									color: #686868;
+								}
+							}							
+						}
+						&.fbLogin{
+							width: 349px;
+							float: left;
+							padding: 0 0 0 35px;
+							.title{
+								margin: 50px 0 5px 0;
+							}
+							.memo{
+								color: #686868;
+								font-size: $fontSizeThirdContent;
+								margin: 20px 0 0 0;							
+							}
+							.control{
+								margin: 20px 0 0 0;	
+							}
+						}
+						.title{
+							color: #000;
+							font-size: $fontSizeFirstHeading;
+							margin: 0 0 5px 0;
+						}
+						.heading{
+							color: #bd0000;
+							font-size: $fontSizeSecondHeading;
+							margin: 0 0 5px 0;
+						}
+						.content{
+							color: #000;
+							font-size: $fontSizeFirstContent;
+						}
+						.fieldList{
+							width: 605px;
+							margin: 0 auto;
+							.fieldItem{
+								margin: 0 0 $divideSpace 0;
+								font-size: $fontSizeFirstContent;
+								text-align: right;
+								.required{
+									color: #c40303;
+									padding: 0 3px 0 0;
+								}
+								.textField{
+									width: 500px;
+									text-align: left;
+									padding: 5px $divideSpace 5px $divideSpace;
+									height: 17px;
+									font-size: $fontSizeSecondContent;
+									line-height: 17px; 
+									&.nameField{
+										margin: 0 0 0 $divideSpace;
+									}
+									&.emailField{
+										margin: 0 0 0 15px;
+									}
+								}
+							}							
+						}
+					}	
+					.orDivider{
+						float: left;
+						background: url(../images/divider_or.png) no-repeat 0 0;
+						width: 32px;
+						height: 320px;
+						margin: 0 0 0 25px;
+					}								
+				}
+				.control{
+					text-align: center;
+					margin: 30px 0 0 0;
+					.btnDefault{
+						color: #fff;
+						display: inline-block;
+						font-size: $fontSizeFirstHeading;
+						width: 305px;
+						height: 24px;
+						line-height: 24px;
+						padding: $divideSpace 0 $divideSpace 0;
+						text-align: center;
+						text-decoration: none;
+						margin: 0 $divideSpace 0 $divideSpace;
+						outline: none;
+						&.btnCancel{
+							background: #969696;
+						}
+						&.btnConfirm{
+							background: #416898;
+						}
+						&.btnLogin{
+							background: #416898;
+							font-size: $fontSizeFourthHeading;
+							line-height: 16px;
+							width: 349px;
+							height: 16px;
+							margin: 0 auto;
+							padding: 10px 0 10px 0;
+						}
+						&.btnfbLogin{
+							background: #416898;
+							font-size: $fontSizeFourthHeading;
+							line-height: 16px;
+							width: 349px;
+							height: 36px;
+							margin: 0 auto;
+							padding: 10px 0 10px 0;	
+							padding: 0;		
+							.icon{
+								background: url(../images/icon/icon_fb.png) 0 0 no-repeat;
+								width: 25px;
+								height: 25px;
+								display: block;
+								float: left;
+								margin: 5px 0 0 10px;
+							}		
+							.text{
+								display: block;
+								float: left;
+								margin: 10px 0 0 125px;								
+							}		
+						}
+					}
+				}
+				.note{
+					color: #828282;
+					font-size: $fontSizeThirdContent;
+					text-align: center;
+					margin: 20px 0 20px 0;
+				}
+				.popupLink{
+					color: #bd0000;
+					padding: 0 1px;
+					outline: none;
+				}
+				.emphasis{
+					color: #bd0000;
+					padding: 0 1px;
+				}		
+			}
+		}
+		.tableDefault{
+			border: 1px solid #dfdfdf;
+			.tableHeadRow{
+				background: #416898;
+				color: #fff;
+				font-size: $fontSizeFirstHeading;
+				line-height: $fontSizeFirstHeading;
+				.rowHead{
+					padding: 15px;
+					text-align: center;
+					&.receiver{
+						width: 125px;
+					}
+					&.phone{
+						width: 125px;
+					}
+					&.mobile{
+						width: 125px;
+					}
+					&.address{
+						width: 300px;
+					}
+					&.control{
+						width: 125px;
+					}
+				}
+			}
+			.tableRow{
+				.rowDefault{
+					color: #828282;
+					font-size: $fontSizeFirstContent;
+					padding: 15px;
+					&.receiver{
+						text-align: center;
+					}
+					&.phone{
+						text-align: center;
+					}
+					&.mobile{
+						text-align: center;
+					}
+					&.address{
+					}
+					&.control{
+						text-align: center;
+					}					
+				}
+			}
+			.btnSelect{
+				@include btnCustomSetting(#a4a4a4, #fff, $fontSizeFourthHeading, 90px, $fontSizeFourthHeading, $fontSizeFourthHeading, 7px, 0, 0);
+				display: inline-block;
+			}
+		}	
+		&.untitle{
+			.ui-dialog-titlebar{
+				.ui-dialog-title{
+					border-left: 0px solid #3b5998;
+				}	
+			}		
+		}	
+	}
+}

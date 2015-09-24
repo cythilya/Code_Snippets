@@ -1,0 +1,59 @@
+﻿$tabVerticalNavFontSize: 12px;
+$tabVerticalNavDefaultBackground: #eee;
+$tabVerticalNavDefaultFontColor: #555;
+$tabVerticalNavSelectedBackground: #fff;
+$tabVerticalNavSelectedFontColor: #000;
+.tabsvertical{
+	font-family: "微軟正黑體";
+	width: 1240px;
+	.tabs-nav {
+		width: 240px;
+		float: left;
+		.tab-nav-item{
+			background: $tabVerticalNavDefaultBackground;
+			border-left: 1px solid #999;
+			border-top: 1px solid #999;
+			.tab-nav-link{
+				font-size: $tabVerticalNavFontSize;
+				color: $tabVerticalNavDefaultFontColor;
+				display: block;
+				padding: 9px 12px 9px 12px;
+				text-decoration: none;
+				white-space: nowrap;
+				outline: none;
+				&:hover{
+					color: $tabVerticalNavSelectedFontColor;
+				}
+				&:first-child{
+					margin-left:5px;
+				}
+			}
+			&.selected{
+				background: $tabVerticalNavSelectedBackground;
+				border-bottom: 1px solid #fff;
+				.tab-nav-link{
+					color: $tabVerticalNavSelectedFontColor;
+					font-weight:bold;
+				}
+			}
+			&:last-child{
+				border-bottom:1px solid #999;
+			}
+		}
+	}
+	.tabs-panel-list{
+		float: left;
+		width: 998px;
+		.tab-panel{
+			border:1px solid #999;
+			min-height:300px;
+			padding:5px 0 0 0;
+			text-align:justify;
+			word-wrap:break-word;
+			display: none;
+			.tab-content{
+				padding:10px;
+			}
+		}
+	}
+}
