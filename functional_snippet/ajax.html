@@ -8,13 +8,30 @@
 <div id="playground"></div>
 <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 <script>
+$.ajax.fake.registerWebservice('/SaveServiceInfo', function(data) {
+	return {
+		"success": true,
+		"data" : {},                    
+		"message": "success!"
+	}
+});  
+
+
 $.ajax({
-	url: '../Show7/SaveMissionConfigTA',
+	url: '/SaveServiceInfo',
 	type: 'post',
 	data: {},
 	dataType: 'json',
-	error: function (xhr) {},
-	success: function (response) {}
+	error: function (xhr) {
+		alert('噢噢！發生錯誤了！請重新再試一次～');
+	},
+	success: function (response) {
+		if(response.success){
+		}
+		else{
+			alert('噢噢！發生錯誤了！請重新再試一次～');
+		}                                        
+	}
 });
 </script>
 </body>
