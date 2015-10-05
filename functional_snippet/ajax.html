@@ -16,17 +16,19 @@ $.ajax.fake.registerWebservice('/SaveServiceInfo', function(data) {
 	}
 });  
 
-
 $.ajax({
 	url: '/SaveServiceInfo',
 	type: 'post',
 	data: {},
 	dataType: 'json',
+	fake: true,
 	error: function (xhr) {
 		alert('噢噢！發生錯誤了！請重新再試一次～');
 	},
 	success: function (response) {
 		if(response.success){
+			alert('儲存成功。');
+			location.reload();  		
 		}
 		else{
 			alert('噢噢！發生錯誤了！請重新再試一次～');
