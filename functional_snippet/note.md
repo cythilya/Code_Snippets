@@ -33,12 +33,10 @@
 - [Design Pattern - Singleton](design_pattern_singleton.html)
 - [Design Pattern - Factory](design_pattern_factory.html)
 - [Design Pattern - Iterator](design_pattern_iterator.html) 
-<<<<<<< HEAD
 - [Design Pattern - Decorator](design_pattern_decorator.html) 
-=======
 - [Design Pattern - Strategy](design_pattern_strategy)
 - [Design Pattern - Observer](design_pattern_observer)
->>>>>>> 0e5a24e7309c2635bbbeb3cbad8155370326edcd
+- [debounce-throttle](debounce-throttle)
 
 ##E
 - [event listener](event_listener.html)
