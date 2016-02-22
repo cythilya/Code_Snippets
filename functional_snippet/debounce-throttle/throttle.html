@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+<link rel="stylesheet" href="css/reset-font-min.css">
+<link rel="stylesheet" href="css/clearfix.css">
+</head>
+<body>
+<a class="btn-throttle" href="#">click!</a>
+<script src="js/jquery-1.8.2.min.js"></script>
+<script>
+function throttle(fn, threshhold, scope) {
+  threshhold || (threshhold = 250);
+  var last,
+      deferTimer;
+  return function () {
+    var context = scope || this;
+
+    var now = +new Date,
+        args = arguments;
+    if (last && now < last + threshhold) {
+      // hold on to it
+      clearTimeout(deferTimer);
+      deferTimer = setTimeout(function () {
+        last = now;
+        fn.apply(context, args);
+      }, threshhold);
+    } else {
+      last = now;
+      fn.apply(context, args);
+    }
+  };
+};
+
+$('.btn-throttle').click(throttle(function (e){
+	e.preventDefault();
+	console.log('click');
+}, 2000));
+</script>
+</body>
+</html>
