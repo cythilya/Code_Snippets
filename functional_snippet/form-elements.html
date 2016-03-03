@@ -1,0 +1,56 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+</head>
+<body>
+<form name="myForm">
+	<input type="text" name="title" value="this is title">
+	<input type="text" name="description" value="this is description">
+	<select name="selection" onchange="myFunction()">
+		<option name="select-1">1</option>
+		<option name="select-2">2</option>
+		<option name="select3">3</option>
+	</select>
+	<select name="selection1" onchange="myFunction1()">
+		<option name="select-4">4</option>
+		<option name="select-5">5</option>
+		<option name="select-6">6</option>
+	</select>	
+</form>
+<form name="anotherForm">
+	<input type="text" name="title" value="this is another title">
+	<input type="text" name="description" value="this is another description">
+</form>
+<script>
+var myForm = document.forms.myForm,
+	anotherForm = document.forms.anotherForm;
+	elemTitle = myForm.elements.title,
+	title = elemTitle.value,
+	elemDescription = myForm.elements.description,
+	description = elemDescription.value,
+	elemAnotherTitle = anotherForm.elements.title,
+	anotherTitle = elemAnotherTitle.value,
+	elemAnotherDescription = anotherForm.elements.description,
+	anotherDescription = elemAnotherDescription.value;
+
+console.log(title);
+console.log(description);
+console.log(anotherTitle);
+console.log(anotherDescription);
+console.log(myForm.elements.selection.options['select-2'].value);
+console.log(myForm.elements.selection.options.select3.value);
+
+function myFunction (){
+	var selected = myForm.elements.selection.options[myForm.elements.selection.selectedIndex].value;
+	console.log(selected);
+}
+
+function myFunction1 (){
+	var selected = myForm.elements.selection1.options[myForm.elements.selection1.selectedIndex].value;
+	console.log(selected);
+}
+</script>
+</body>
+</html>
