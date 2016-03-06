@@ -58,7 +58,7 @@
 - [json parse, json stringnify](json_parse_stringnify.html)
 
 ##M
-- [modifying Document: createElement, createTextNode, cloneNode, appendChild, insertBefore, removeChild, replaceChild](modifying_document.html)
+- [modifying Document: createElement, createTextNode, cloneNode, appendChild, insertBefore, removeChild, replaceChild](modifying_document.html), [another exercise](modifying-document.html)
 - [mobile: detect mobile](detect_mobile.txt)
 - [match string](match_string)
 - [memoization pattern](memoization_pattern.html)

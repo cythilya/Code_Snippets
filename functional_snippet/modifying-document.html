@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>modifying-document</title>
+</head>
+<body>
+<div id="parent">
+	<div id="firstChild"></div>
+	<div id="secondChild"></div>
+</div>
+
+<script>
+var div = document.createElement('div'); //create a element
+var textNode = document.createTextNode('this is a text node'); //create a text node
+console.log(div);
+console.log(textNode);
+
+var cloningNode = div.cloneNode(true); //clone a node. true: with all descendants, false: without descendants
+console.log(cloningNode);
+
+var parentNode = document.getElementById('parent');
+var firstChild = document.getElementById('firstChild')
+//parentNode.appendChild(div); //append a child
+
+var insertedNode = document.createElement('div');
+insertedNode.innerHTML = 'inserted node';
+parentNode.insertBefore(insertedNode, firstChild); //insert before
+
+var insertedNode1 = document.createElement('div');
+insertedNode1.innerHTML = 'inserted node 1';
+parentNode.insertBefore(insertedNode1, null); //set null and work as append child
+
+
+var removedChild = parentNode.removeChild(document.getElementById('firstChild'));
+console.log(removedChild);
+
+var replacedChild = parentNode.replaceChild(document.createElement('span'), document.getElementById('secondChild'));
+console.log(replacedChild);
+
+// Summary
+
+// Creation methods:
+// document.createElement(tag) - creates a new element node.
+// document.createTextNode(value) - creates a new text node with given value
+// elem.cloneNode(deep) - clones the element
+
+// Inserting and removing methods are called from parent node. All of them return elem:
+// parent.appendChild(elem)
+// parent.insertBefore(elem, nextSibling)
+// parent.removeChild(elem)
+// parent.replaceChild(elem, currentElem)
+</script>
+</body>
+</html>
