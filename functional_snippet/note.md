@@ -89,3 +89,4 @@
 ##T
 - [typeof: type detection](typeof.html)
 - [trim](trim_201308062236)
+- [this](this.html)

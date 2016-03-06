@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>$title</title>
+</head>
+<body>
+<script>
+//First, when called as a method
+var john = {
+	firstName: 'John'
+};
+
+function sayHi(){
+	console.log(this);
+};
+
+john.sayHi = sayHi;
+john['sayHi']();
+
+//Second, when called as a function
+function func(){
+	//"use strict"
+	console.log(this);
+};
+
+func();
+
+//Fourth, explicit this
+var Apple = {
+	firstName: 'Apple'
+};
+
+function func(){
+	console.log(this.firstName);
+};
+
+function func1(a){
+	console.log(this[a]);
+};
+
+func.call(Apple);
+func1.call(Apple, 'firstName');
+
+var Bob = {
+	firstName: 'Babara',
+	lastName: 'Smith'
+};
+
+var args = ['firstName', 'lastName'];
+
+function func2(context, args){
+	console.log(this['firstName'] + ' ' + this['lastName']);
+};
+
+func2.apply(Bob, args);
+</script>
+</body>
+</html>
